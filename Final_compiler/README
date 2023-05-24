@@ -1,0 +1,17 @@
+List of what the compiler can do:
+-Integer declaration and affectation (even complexe one)
+-IF/Else with nested if/else statements 
+-global variable declaration 
+-Function declaration
+-Print (for now simple ids)
+-Arithmetical operations
+-Logical operations
+
+@TODO 
+-While statement 
+-Constant declaration (once we've init can't change it anymore)
+-Function call 
+-Convert the ASM file with a register approach
+-Code an interpreter for the ASM register oriented 
+
+

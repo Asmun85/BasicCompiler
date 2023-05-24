@@ -1,0 +1,5 @@
+a=b+c en asm donne add @a,@b,@c
+a=b+c+d en asm donne deux add
+on utilise des var temporaires pour stocker le res ex b+c stocke ensuite stocke+d pour nous donner le rés
+-déclaration d'une variable temporaire (sur la pile n'a pas d'id)
+-on copie le contenue de la var temps 
