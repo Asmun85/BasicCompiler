@@ -1,4 +1,4 @@
-List of what the compiler can do:
+#### List of what the compiler can do:
 -Integer declaration and affectation (even complexe one)
 -IF/Else with nested if/else statements 
 -global variable declaration 
@@ -6,12 +6,15 @@ List of what the compiler can do:
 -Print (for now simple ids)
 -Arithmetical operations
 -Logical operations
-
-@TODO 
 -While statement 
 -Constant declaration (once we've init can't change it anymore)
--Function call 
+
+### @TODO 
+-modify the process of the tmp_var (getaddr then unstack instead of returning an address we can return the whol symbol)
 -Convert the ASM file with a register approach
 -Code an interpreter for the ASM register oriented 
+-Function call 
 
+#### To test the compiler, just execute the bash script associated with the functionnality that you want to test 
+(example : want to check if integer declaration and assignement if functionnal : ./intDecAndAssign)
 

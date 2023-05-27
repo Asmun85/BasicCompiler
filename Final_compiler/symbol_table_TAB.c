@@ -108,7 +108,6 @@ int getAddr(symbol *t, symbol target)
     return ret; // NO SUCH SYMBOL FOUND IN TABLE
 }
 
-// ONLY VARIABLES OF THE SAME DEPTH CAN BE ASSIGNED TO EACH OTHER
 int getAddrName(symbol *t, char *targetname)
 {
     int target = -1;
@@ -145,7 +144,7 @@ symbol getSymbolByName(symbol *t, char *targetname)
 }
 
 int unstack(symbol *t)
-{ // FOR OPERATIONS
+{ 
     sTableSize--;
     printf("Unstacked following symbol: \n");
     printSymbol(t[sTableSize]);

@@ -8,10 +8,10 @@
 typedef struct
 {
     char sName[20];
-    int type; // 1 IS GOR VAR AND 2 FOR CONST
+    int type; // 1 for simple var, 2 for constant
     int depth;
     int addr;
-    int assigned; //FOR CONSTANTS TO AVOID RE-ASSIGNING THEM TO A VALUE
+    int assigned; //if constant, reasignement is not allowed!
 } symbol;
 
 symbol *init_sTable();

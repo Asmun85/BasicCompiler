@@ -35,3 +35,9 @@ IfElse: all
 
 Nestedif:
 	./$(BIN) < nested_if.c
+
+While:
+	./$(BIN) < While.c
+
+Funcall:
+	./$(BIN) < Functioncall.c

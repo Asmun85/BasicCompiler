@@ -9,6 +9,7 @@ symbol * symbole_table;
 asm_inst * instruction_table;
 int patching = -1;
 int nextCond = -1;
+int startloop = -1;
 %}
 
 // %code provides {
@@ -41,7 +42,7 @@ int nextCond = -1;
 
 %type <name> CompOp
 %type <name> LogicOp
-%type <nb>   NextStatement
+%type <nb>   NextStatement Operand
 %start program
 %%
 
@@ -59,6 +60,7 @@ Function
                                                                                 decrementDepth();
                                                                                 add_inst(instruction_table,"NOP",-1,-1,-1);} 
   | intDeclaration tSEMI
+  | ConstDeclaration tSEMI
   ;
 
 DecArg
@@ -85,21 +87,60 @@ Instructions
 
 Instruction 
   : intDeclaration tSEMI
-  | tID tASSIGN Operand 
-              {printf("Declared variable update\n");
-               int addr1 = unstack(symbole_table);
-               asm_inst inst = add_inst(instruction_table,
-               "COP",getAddrName(symbole_table,$1),addr1,0);}
-                tSEMI 
+  | ConstDeclaration tSEMI
+  | tID tASSIGN Operand tSEMI 
+  {if(getAddrName(symbole_table,$1) == -1){
+    printf("ERROR : SYMBOL NOT FOUND\n");
+    exit(0);}
+   else{
+    if(getSymbolByName(symbole_table,$1).type == 2){
+      //Constant 
+      if(getSymbolByName(symbole_table,$1).assigned){
+        printf("ERROR : CAN NOT RE ASSIGN A CONST !!!!!! \n");
+        exit(1);
+      }
+      else{
+        printf("Const assignement (firs and last one)\n");
+        int addr1 = unstack(symbole_table);
+        asm_inst inst = add_inst(instruction_table,
+                "COP",getAddrName(symbole_table,$1),addr1,0);
+        const_assigned(&symbole_table[getAddrName(symbole_table,$1)]);
+      }
+    }
+    else if(getSymbolByName(symbole_table,$1).type == 1){
+      //Simple Variable
+      if($3 !=1){
+        printf("Declared variable update\n");
+        int addr1 = unstack(symbole_table);
+        asm_inst inst = add_inst(instruction_table,
+        "COP",getAddrName(symbole_table,$1),addr1,0);
+      }
+      else{
+        //for value update with function call
+      }
+
+    }
+   }
+
+  }
+              // {printf("Declared variable update\n");
+              //  int addr1 = unstack(symbole_table);
+              //  asm_inst inst = add_inst(instruction_table,
+              //  "COP",getAddrName(symbole_table,$1),addr1,0);}
+                
   | tPRINT tLPAR PrintOperand tRPAR tSEMI  
             { printf("Print statement found\n");}
-  | tWHILE tLPAR Condition tRPAR {int startloop = get_nb_lignes_asm();
-                                  asm_inst inst = add_inst(instruction_table,"JMPF",-1,-1,-1);
-                                  $1 = inst.m_num;} 
+  | tWHILE tLPAR {startloop = get_nb_lignes_asm();} 
+    Condition tRPAR {asm_inst inst = add_inst(instruction_table,"JMPF",-1,-1,-1);
+                     $1 = inst.m_num;
+                     int valCond = unstack(symbole_table);} 
     tLBRACE Instructions tRBRACE  {printf("While statement\n");
                                    int current = get_nb_lignes_asm();
                                    patching = $1;
-                                   patch(instruction_table,$1,current);}
+                                   patch(instruction_table,$1,current);
+                                   asm_inst inst = add_inst(instruction_table,"JMP",-1,startloop,-1);
+                                   // The minus one is due to the JMPF instruction we have to go to the comparison instruction
+                                   }
 
 
   | tIF tLPAR Condition tRPAR     {asm_inst inst = add_inst(instruction_table,"JMPF",-1,-1,-1);
@@ -114,7 +155,7 @@ Instruction
                                    deleteSymbols(symbole_table);
                                    decrementDepth();}
     NextStatement
-  | FunctionCall tSEMI {printf("function called\n");}
+  | FunctionCall tSEMI {printf("function called as an instruction\n");}
   // | tRETURN Operand   {printf("return Operand statement!\n");
   //                                   unstack(symbole_table);} tSEMI
   ;
@@ -134,8 +175,10 @@ NextStatement
                     decrementDepth();}
   | /*empty*/
   ;
+
 intDeclaration
   : tINT intDeclarationList;
+
 
 intDeclarationList
 	: tID {printf("int declaration found\n");
@@ -147,6 +190,20 @@ intDeclarationList
                 asm_inst inst = add_inst(instruction_table,
                 "COP",getAddrName(symbole_table,$1),addr1,0);}
   | intDeclarationList tCOMMA intDeclarationList;
+
+ConstDeclaration
+  :tCONST tINT constDeclarationList;
+
+constDeclarationList
+  :tID {printf("Const Declaration found\n");
+        symbol s = addSymbol(symbole_table,$1,2);}
+  |tID tASSIGN  {printf("Const declaration & assignement found\n");
+                 symbol s = addSymbolAssigned(symbole_table,$1,2);}
+                Operand     
+                {int addr1 = unstack(symbole_table);
+                 asm_inst inst = add_inst(instruction_table,
+                 "COP",getAddrName(symbole_table,$1),addr1,-1);}
+  |constDeclarationList tCOMMA intDeclarationList;
 
 Operand 
   :	tID {printf("Operand ID found\n");
@@ -184,6 +241,8 @@ Operand
                           "DIV",getAddr(symbole_table,result),arg1,arg2);}
   | tID tLPAR Parametre tRPAR 
   | tID tLPAR tRPAR 
+  | FunctionCall {$$ = 1;
+                  printf("Function call as an oprand \n");} // We don't need a tmp variable when we assign a value with a function 
   ;
   
 Condition 

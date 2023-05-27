@@ -23,32 +23,33 @@ HEXNB     0x[0-9a-fA-F]+
 
 %%
 
-"if"      {return tIF;}
-"else"    {return tELSE;}
-"while"   {return tWHILE;}
-"print"   {return tPRINT;}
+"if"      {return tIF;    }
+"else"    {return tELSE;  }
+"while"   {return tWHILE; }
+"print"   {return tPRINT; }
 "return"  {return tRETURN;}
-"int"     {return tINT;}
-"void"    {return tVOID;}
-"const"   {return tCONST;}
-"true"    {return tTRUE;}
-"false"   {return tFALSE;}
+"int"     {return tINT;   }
+"void"    {return tVOID;  }
+"const"   {return tCONST; }
+"true"    {return tTRUE;  }
+"false"   {return tFALSE; }
+"const"   {return tCONST; }
 
 "+"       {return tADD;}
 "-"       {return tSUB;}
 "/"       {return tDIV;}
 "*"       {return tMUL;}
 
-"||"      {return tOR;}
+"||"      {return tOR; }
 "&&"      {return tAND;}
 "!"       {return tNOT;}
 
-"<"       {return tLT;}
-">"       {return tGT;}
-"!="      {return tNE;}
-"=="      {return tEQ;}
-"<="      {return tLE;}
-">="      {return tGE;}
+"<"       {return tLT;    }
+">"       {return tGT;    }
+"!="      {return tNE;    }
+"=="      {return tEQ;    } 
+"<="      {return tLE;    }
+">="      {return tGE;    }
 "="       {return tASSIGN;}
 
 "{"       {incrementDepth();
