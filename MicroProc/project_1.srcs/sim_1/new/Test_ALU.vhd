@@ -51,7 +51,7 @@ signal B : std_logic_vector(7 downto 0) := (others => '0');
 signal Ctrl_Alu : STD_LOGIC_vector(2 downto 0) := (others => '0');
 --output signals
 signal S : std_logic_vector(7 downto 0) := (others => '0');
-signal N,O,Z,C : STD_LOGIC;
+signal N,O,Z,C : STD_LOGIC := '1';
 
 signal i:integer;
 
@@ -68,8 +68,9 @@ begin
             
 stim_process: process
 begin
-    A <= x"FF";
-    B <= x"05";
+    wait for 100ns;
+    A <= x"f8";
+    B <= x"02";
     for i in 0 to 15 loop
         Ctrl_Alu <= Ctrl_Alu + "001";
         wait for 100ns;

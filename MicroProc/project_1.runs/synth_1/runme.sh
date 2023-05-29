@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/kanane/Bureau/4A/ProjetSI/project_1/project_1.runs/synth_1'
+HD_PWD='/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Pipeline3Op.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Pipeline3Op.tcl
+EAStep vivado -log My_processor.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source My_processor.tcl

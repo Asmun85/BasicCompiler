@@ -1,0 +1,356 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon May 29 22:40:37 2023
+# Process ID: 59627
+# Current directory: /home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.runs/synth_1
+# Command line: vivado -log My_processor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source My_processor.tcl
+# Log file: /home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.runs/synth_1/My_processor.vds
+# Journal file: /home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source My_processor.tcl -notrace
+Command: synth_design -top My_processor -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 59644 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.270 ; gain = 83.828 ; free physical = 10734 ; free virtual = 21890
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'My_processor' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:42]
+INFO: [Synth 8-3491] module 'Instruction_mem' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Instruction_mem.vhd:34' bound to instance 'Inst_mem' of component 'Instruction_mem' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:187]
+INFO: [Synth 8-638] synthesizing module 'Instruction_mem' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Instruction_mem.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Instruction_mem' (1#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Instruction_mem.vhd:40]
+INFO: [Synth 8-3491] module 'Pipline4op' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipline4op.vhd:34' bound to instance 'LI_DI' of component 'Pipline4op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:193]
+INFO: [Synth 8-638] synthesizing module 'Pipline4op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipline4op.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'Pipline4op' (2#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipline4op.vhd:46]
+INFO: [Synth 8-3491] module 'Pipline4op' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipline4op.vhd:34' bound to instance 'DI_EX' of component 'Pipline4op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:211]
+INFO: [Synth 8-3491] module 'ALU' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/ALU.vhd:37' bound to instance 'mon_ALU' of component 'ALU' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:229]
+INFO: [Synth 8-638] synthesizing module 'ALU' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/ALU.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (3#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/ALU.vhd:45]
+INFO: [Synth 8-3491] module 'Pipeline3Op' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipeline3Op.vhd:34' bound to instance 'EX_MEM' of component 'pipeline3op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:244]
+INFO: [Synth 8-638] synthesizing module 'Pipeline3Op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipeline3Op.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'Pipeline3Op' (4#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipeline3Op.vhd:44]
+INFO: [Synth 8-3491] module 'Data_mem' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Data_mem.vhd:34' bound to instance 'Data_memory' of component 'Data_mem' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:262]
+INFO: [Synth 8-638] synthesizing module 'Data_mem' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Data_mem.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'Data_mem' (5#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Data_mem.vhd:43]
+INFO: [Synth 8-3491] module 'Pipeline3Op' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipeline3Op.vhd:34' bound to instance 'MEM_RE' of component 'pipeline3op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:273]
+INFO: [Synth 8-3491] module 'Banc_De_Registre' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Banc_De_Registre.vhd:35' bound to instance 'register_bank' of component 'Banc_de_registre' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:289]
+INFO: [Synth 8-638] synthesizing module 'Banc_De_Registre' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Banc_De_Registre.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'Banc_De_Registre' (6#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Banc_De_Registre.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'My_processor' (7#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:42]
+WARNING: [Synth 8-3331] design Pipeline3Op has unconnected port clk
+WARNING: [Synth 8-3331] design Pipline4op has unconnected port Clk
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1316.895 ; gain = 145.453 ; free physical = 10724 ; free virtual = 21880
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1316.895 ; gain = 145.453 ; free physical = 10730 ; free virtual = 21886
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1324.898 ; gain = 153.457 ; free physical = 10729 ; free virtual = 21885
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'Res_reg' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/ALU.vhd:50]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1364.055 ; gain = 192.613 ; free physical = 10647 ; free virtual = 21803
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
++---Registers : 
+	               28 Bit    Registers := 1     
+	                8 Bit    Registers := 273   
++---Muxes : 
+	 256 Input     28 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 302   
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 546   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module My_processor 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+Module Instruction_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               28 Bit    Registers := 1     
++---Muxes : 
+	 256 Input     28 Bit        Muxes := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module Data_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 257   
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 264   
+	   2 Input      1 Bit        Muxes := 512   
+Module Banc_De_Registre 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 34    
+	   2 Input      1 Bit        Muxes := 32    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[20]' (FD) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[4]' (FD) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[5]' (FD) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[6]' (FD) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[7]' (FD) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[21]' (FD) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[22]' (FD) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[23]' (FD) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[3]' (FD) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[1]' (FD) to 'Inst_mem/Vout_reg[12]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[12]' (FD) to 'Inst_mem/Vout_reg[13]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[13]' (FD) to 'Inst_mem/Vout_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[14]' (FD) to 'Inst_mem/Vout_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Inst_mem/Vout_reg[15] )
+WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[15]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[14]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[13]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[12]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[11]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[10]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[9]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[8]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Inst_mem/Vout_reg[15]) is unused and will be removed from module My_processor.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10523 ; free virtual = 21687
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10523 ; free virtual = 21687
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][7] )
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][7]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][6]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][5]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][4]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][3]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][2]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][1]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][0]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][7]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][6]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][5]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][4]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][3]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][2]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][1]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][0]) is unused and will be removed from module My_processor.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21679
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21679
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21679
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21679
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21679
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    10|
+|3     |LUT2   |   557|
+|4     |LUT3   |   188|
+|5     |LUT4   |    69|
+|6     |LUT5   |   140|
+|7     |LUT6   |  1005|
+|8     |MUXF7  |   238|
+|9     |MUXF8  |   119|
+|10    |FDRE   |  2182|
+|11    |LD     |     8|
+|12    |IBUF   |     9|
+|13    |OBUF   |     8|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------+-----------------+------+
+|      |Instance        |Module           |Cells |
++------+----------------+-----------------+------+
+|1     |top             |                 |  4534|
+|2     |  Data_memory   |Data_mem         |  2958|
+|3     |  Inst_mem      |Instruction_mem  |  1361|
+|4     |  mon_ALU       |ALU              |    21|
+|5     |  register_bank |Banc_De_Registre |   176|
++------+----------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21680
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10523 ; free virtual = 21687
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.172 ; gain = 396.723 ; free physical = 10537 ; free virtual = 21700
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 384 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  LD => LDCE: 8 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+61 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1624.191 ; gain = 464.375 ; free physical = 10515 ; free virtual = 21679
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.runs/synth_1/My_processor.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file My_processor_utilization_synth.rpt -pb My_processor_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1648.203 ; gain = 0.000 ; free physical = 10513 ; free virtual = 21677
+INFO: [Common 17-206] Exiting Vivado at Mon May 29 22:41:21 2023...

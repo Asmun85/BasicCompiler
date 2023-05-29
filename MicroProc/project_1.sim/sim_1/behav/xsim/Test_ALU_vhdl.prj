@@ -1,6 +1,15 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/My_processor.vhd" \
+"../../../../project_1.srcs/sources_1/new/Pipeline3Op.vhd" \
+"../../../../project_1.srcs/sources_1/new/Instruction_mem.vhd" \
+"../../../../project_1.srcs/sources_1/new/Data_mem.vhd" \
+"../../../../project_1.srcs/sources_1/new/Banc_De_Registre.vhd" \
 "../../../../project_1.srcs/sources_1/new/ALU.vhd" \
+"../../../../project_1.srcs/sources_1/new/Pipline4op.vhd" \
+"../../../../project_1.srcs/sim_1/new/Test_Ins_mem.vhd" \
+"../../../../project_1.srcs/sim_1/new/Test_Banc_de_registre.vhd" \
+"../../../../project_1.srcs/sim_1/new/Test_Data_mem.vhd" \
 "../../../../project_1.srcs/sim_1/new/Test_ALU.vhd" \
 
 # Do not sort compile order

@@ -43,19 +43,30 @@
 #define alloca _alloca
 #endif
 typedef void (*funcp)(char *, char *);
-extern void execute_13(char*, char *);
-extern void execute_14(char*, char *);
-extern void execute_12(char*, char *);
+extern void execute_2(char*, char *);
+extern void execute_3(char*, char *);
+extern void execute_4(char*, char *);
+extern void execute_5(char*, char *);
+extern void execute_6(char*, char *);
+extern void execute_7(char*, char *);
+extern void execute_8(char*, char *);
+extern void execute_9(char*, char *);
+extern void execute_24(char*, char *);
+extern void execute_25(char*, char *);
+extern void execute_21(char*, char *);
+extern void execute_22(char*, char *);
+extern void execute_23(char*, char *);
+extern void vlog_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
 extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-extern void transaction_6(char*, char*, unsigned, unsigned, unsigned);
-funcp funcTab[5] = {(funcp)execute_13, (funcp)execute_14, (funcp)execute_12, (funcp)vhdl_transfunc_eventcallback, (funcp)transaction_6};
-const int NumRelocateId= 5;
+extern void transaction_38(char*, char*, unsigned, unsigned, unsigned);
+funcp funcTab[16] = {(funcp)execute_2, (funcp)execute_3, (funcp)execute_4, (funcp)execute_5, (funcp)execute_6, (funcp)execute_7, (funcp)execute_8, (funcp)execute_9, (funcp)execute_24, (funcp)execute_25, (funcp)execute_21, (funcp)execute_22, (funcp)execute_23, (funcp)vlog_transfunc_eventcallback, (funcp)vhdl_transfunc_eventcallback, (funcp)transaction_38};
+const int NumRelocateId= 16;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/Test_Banc_de_registre_behav/xsim.reloc",  (void **)funcTab, 5);
-	iki_vhdl_file_variable_register(dp + 4096);
-	iki_vhdl_file_variable_register(dp + 4152);
+	iki_relocate(dp, "xsim.dir/Test_Banc_de_registre_behav/xsim.reloc",  (void **)funcTab, 16);
+	iki_vhdl_file_variable_register(dp + 9512);
+	iki_vhdl_file_variable_register(dp + 9568);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */

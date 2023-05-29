@@ -1,1 +1,1 @@
--wto "d5616f3bd0f0469da75fdccb72119034" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "Test_Banc_de_registre_behav" "xil_defaultlib.Test_Banc_de_registre" -log "elaborate.log" 
+-wto "d5616f3bd0f0469da75fdccb72119034" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "Test_Banc_de_registre_behav" "xil_defaultlib.Test_Banc_de_registre" "xil_defaultlib.glbl" -log "elaborate.log" 

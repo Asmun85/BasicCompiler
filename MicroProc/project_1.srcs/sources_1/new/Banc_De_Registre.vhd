@@ -46,8 +46,8 @@ end Banc_De_Registre;
 
 architecture Behavioral of Banc_De_Registre is
 
-type tab is array(15 downto 0) of std_logic_vector(7 downto 0); 
-Signal reg_tab : tab;
+type tab is array(0 to 15) of std_logic_vector(7 downto 0); 
+Signal reg_tab : tab := (others =>(others=>'0'));
 --Signal i : integer ; -- to change 
 
 begin
@@ -56,14 +56,14 @@ process
 begin
     wait until Clk'event and Clk = '1';
     if (Rst ='1') then
-        reg_tab <= (others=>x"00");
+        reg_tab <= (others=>(others=>'0'));
     end if;
     
     if (W = '1') then
         reg_tab(to_integer(unsigned(Addr_W))) <= Data;   
     end if;
-    QA <= reg_tab(to_integer(unsigned(Addr_A)));
-    QB <= reg_tab(to_integer(unsigned(Addr_B)));          
+        
 end process;
-
+    QA <= reg_tab(to_integer(unsigned(Addr_A))) when (Addr_A /= Addr_w or w='0') else Data;
+    QB <= reg_tab(to_integer(unsigned(Addr_B))) when (Addr_B /= Addr_w or w='0') else Data;  
 end Behavioral;

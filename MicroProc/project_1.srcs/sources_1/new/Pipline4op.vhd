@@ -46,12 +46,8 @@ end Pipline4op;
 architecture Behavioral of Pipline4op is
 
 begin
-process(clk)
-begin
     out_A <= in_A;
     out_OP <= in_OP;
     out_B <= in_B;
     out_C <= in_C;
-end process; 
-
 end Behavioral;

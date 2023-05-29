@@ -44,41 +44,18 @@ end ALU;
 
 architecture Behavioral of ALU is
 Signal Res : STD_LOGIC_VECTOR(15 downto 0);
---to select the 8 most signifcant bits in result
-Signal tmp_vector : STD_LOGIC_VECTOR(7 downto 0);
-
 begin
     process(A,B,Ctrl_ALU)
         begin
-            case(Ctrl_Alu) is
-                when("000") =>
-                Res <= (x"00" & A) + (x"00" & B);
-                --tmp_vector <= Res (15 downto 8);
-                --C <= Res(8);
-                when("010") =>
-                Res <= (x"00"&A) - (x"00"&B);
-                Z <= '0';
-                when("100") =>
-                Res <=A * B;
-                tmp_vector <= Res (15 downto 8);                
-                when others =>
-                    null;
-        --Checking if the result is equal to 0
-            end case;
-            if (Res = x"00") then
-              Z <= '1';
-            else
-              Z <= '0';
-            end if;
-            if(tmp_vector /= "00000000") then
-              O <= '1';
-            else
-              O <= '0';
-            end if;
-            N <= '0';
+            if Ctrl_ALU    = "001" then Res <= (x"00"&A) + (x"00"&B);
+            elsif Ctrl_ALU = "010" then Res <= (x"00"&A) - (x"00"&B);
+            elsif Ctrl_ALU = "100" then Res <= A * B;
+            end if;             
         end process;
-
-        C <= Res(8);
-        S <= Res (7 downto 0);
+        O <= '1' when (Res(15 downto 8) /= "00000000") else '0';
+        Z <= '1' when (Res(7 downto 0) = x"00")  else '0';
+        N <= '0' when (Res(15 downto 8) = x"00") else '1';
+        C <= Res(8); -- Cary for add OP
+        S <= Res (7 downto 0); --Selecting the first eight bits for the output result
         
 end Behavioral;
