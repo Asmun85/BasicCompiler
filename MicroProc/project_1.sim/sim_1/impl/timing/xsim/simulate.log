@@ -1,0 +1,7 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ERROR: Array sizes do not match, left array has 3 elements, right array has 4 elements
+Time: 0 ps  Iteration: 0  Process: /Test_ALU/stim_process
+  File: /home/kanane/Bureau/4A/ProjetSI/project_1/project_1.srcs/sim_1/new/Test_ALU.vhd
+
+HDL Line: /home/kanane/Bureau/4A/ProjetSI/project_1/project_1.srcs/sim_1/new/Test_ALU.vhd:75

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu May 11 12:13:34 2023
+# Process ID: 31399
+# Current directory: /home/kanane/Bureau/4A/ProjetSI/project_1/project_1.sim/sim_1/impl/timing/xsim
+# Command line: wbtcv -mode batch -source /home/kanane/Bureau/4A/ProjetSI/project_1/project_1.sim/sim_1/impl/timing/xsim/xsim.dir/Test_ALU_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/kanane/Bureau/4A/ProjetSI/project_1/project_1.sim/sim_1/impl/timing/xsim/webtalk.log
+# Journal file: /home/kanane/Bureau/4A/ProjetSI/project_1/project_1.sim/sim_1/impl/timing/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/kanane/Bureau/4A/ProjetSI/project_1/project_1.sim/sim_1/impl/timing/xsim/xsim.dir/Test_ALU_time_impl/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu May 11 12:13:35 2023...

@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kanane/Bureau/4A/ProjetSI/project_1/project_1.srcs/sources_1/new/Banc_De_Registre.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Banc_De_Registre
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kanane/Bureau/4A/ProjetSI/project_1/project_1.srcs/sim_1/new/Test_Banc_de_registre.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_Banc_de_registre

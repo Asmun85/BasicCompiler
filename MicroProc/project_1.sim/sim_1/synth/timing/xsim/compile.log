@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kanane/Bureau/4A/ProjetSI/project_1/project_1.sim/sim_1/synth/timing/xsim/Test_ALU_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kanane/Bureau/4A/ProjetSI/project_1/project_1.srcs/sim_1/new/Test_ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_ALU
