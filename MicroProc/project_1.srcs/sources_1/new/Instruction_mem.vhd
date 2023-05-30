@@ -43,10 +43,10 @@ type tab is array (0 to 255) of std_logic_vector(31 downto 0);
 signal instruction_table  : tab := (x"00000000", others => x"00000000");
 begin
 --TESTS FOR FINAL PART
-instruction_table(0) <= x"06050200"; --AFC R5 10, REG(5) WILL CONTAIN 2
-instruction_table(1) <= x"06060A00"; --AFC R6 2, REG(6) WILL CONTAIN 10
+instruction_table(0) <= x"06050200"; --AFC R5 2, REG(5) WILL CONTAIN 2
+instruction_table(1) <= x"06060A00"; --AFC R6 10, REG(6) WILL CONTAIN 10
 instruction_table(2) <= x"01060506"; --ADD R6 R5 R6, REG(6) WILL CONTAIN 12
-instruction_table(3) <= x"02070605"; --MUL R7 R6 R5, REG(7) WILL CONTAIN 2*10=20 AKA 0X1E
+instruction_table(3) <= x"02070605"; --MUL R7 R6 R5, REG(7) WILL CONTAIN 2*12=24 
 
 --instruction_table(2) <= x"08010600"; --AFC 1 6, REG(1) WILL CONTAIN 6
 --instruction_table(3) <= x"05030200"; --COP 3 2, REG(3) WILL CONTAIN 11

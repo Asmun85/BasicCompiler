@@ -185,6 +185,9 @@ signal read_li             : std_logic :='0';
 signal write_di            : std_logic :='0';
 signal write_ex            : std_logic :='0';
 signal write_mem           : std_logic :='0';
+
+--RST signal
+signal RST                 : std_logic :='0';
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -222,13 +225,13 @@ Output_MUX_BR <= output_B_LI_DI when (output_op_LI_DI = x"06" or output_op_LI_DI
 
 --Affecting the proper value for the read_li signal
 read_li   <= '1' when (output_inst_mem(31 downto 24) /= x"00" and output_inst_mem(31 downto 24) /= x"07" and output_inst_mem(31 downto 24) /=x"06") else '0';
-write_di  <= '1' when (output_inst_mem(31 downto 24) /= x"00" and output_inst_mem(31 downto 24) /= x"08") else '0';
-write_ex  <= '1' when (output_OP_LI_DI /= x"00" and output_OP_LI_DI /= x"08") else '0';
-write_mem <= '1' when (output_OP_DI_EX /= x"08" and output_OP_DI_EX /= x"00") else '0';
+write_di  <= '1' when (output_OP_LI_DI /= x"00" and output_OP_LI_DI /= x"08") else '0';
+write_ex  <= '1' when (output_OP_DI_EX /= x"00" and output_OP_DI_EX /= x"08") else '0';
+write_mem <= '1' when (output_OP_EX_MEM /= x"08" and output_OP_EX_MEM /= x"00") else '0';
 
-alea     <= '1' when (read_li ='1' and write_di ='1'   and (output_A_LI_DI = output_inst_mem(15 downto 8)  or output_A_LI_DI=output_inst_mem(7 downto 0))) or 
-                     (read_li ='1' and write_ex = '1'  and (output_inst_mem(15 downto 8) = output_A_DI_EX  or output_inst_mem(7 downto 0)=output_A_DI_EX)) or 
-                     (read_li ='1' and write_mem = '1' and (output_inst_mem(15 downto 8) = output_A_EX_MEM or output_inst_mem(7 downto 0)=output_A_EX_MEM))
+alea     <= '1' when (read_li ='1' and write_di  = '1'   and ((output_A_LI_DI = output_inst_mem(15 downto 8))  or (output_A_LI_DI=output_inst_mem(7 downto 0)))) or 
+                     (read_li ='1' and write_ex  = '1'   and ((output_inst_mem(15 downto 8) = output_A_DI_EX)  or (output_inst_mem(7 downto 0)=output_A_DI_EX))) or 
+                     (read_li ='1' and write_mem = '1'   and ((output_inst_mem(15 downto 8) = output_A_EX_MEM) or (output_inst_mem(7 downto 0)=output_A_EX_MEM)))
                      else '0'; 
                 
 DI_EX : pipline4op
@@ -287,7 +290,7 @@ Data_memory : Data_mem
 port map    (   Addr => output_mux_Data_mem1,
                 Vin  => output_B_EX_MEM,
                 RW   => LC_DATA_Mem,
-                RST  => '0',
+                RST  => RST,
                 CLK  => CLK,
                 Vout => output_Data_memory);
 --either we take the ouput of the data_mem or the output B or EX/Mem pipe
@@ -317,7 +320,7 @@ port map    (   Addr_A => output_B_LI_DI(3 downto 0),
                 W      => output_LC_Last,
                 Data   => output_B_MEM_RE,
                 Clk    => Clk,
-                Rst    => '0',
+                Rst    => RST,
                 QA     => output_QA_BR,
                 QB     => output_QB_BR);
 
@@ -325,7 +328,6 @@ port map    (   Addr_A => output_B_LI_DI(3 downto 0),
 process
 begin
     wait until clk'event and clk='1';
-        
         if (alea = '0') then
             IP <= IP + '1';
         end if;

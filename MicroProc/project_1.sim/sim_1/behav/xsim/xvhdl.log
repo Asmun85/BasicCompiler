@@ -1,2 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity My_processor
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Instruction_mem.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity Instruction_mem

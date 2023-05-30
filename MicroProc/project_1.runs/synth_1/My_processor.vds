@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue May 30 20:46:12 2023
-# Process ID: 63494
+# Start of session at: Tue May 30 22:16:54 2023
+# Process ID: 2943
 # Current directory: /home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.runs/synth_1
 # Command line: vivado -log My_processor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source My_processor.tcl
 # Log file: /home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.runs/synth_1/My_processor.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 63509 
+INFO: Helper process launched with PID 2964 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.277 ; gain = 83.699 ; free physical = 57507 ; free virtual = 69690
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.273 ; gain = 83.812 ; free physical = 12943 ; free virtual = 23247
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'My_processor' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:42]
 INFO: [Synth 8-3491] module 'Instruction_mem' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Instruction_mem.vhd:34' bound to instance 'Inst_mem' of component 'Instruction_mem' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:199]
@@ -50,10 +50,10 @@ WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[2]
 WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[1]
 WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1317.902 ; gain = 146.324 ; free physical = 57486 ; free virtual = 69669
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1317.898 ; gain = 146.438 ; free physical = 12926 ; free virtual = 23232
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1317.902 ; gain = 146.324 ; free physical = 57485 ; free virtual = 69670
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1317.898 ; gain = 146.438 ; free physical = 12934 ; free virtual = 23240
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -61,11 +61,11 @@ Start Loading Part and Timing Information
 Loading part: xc7k70tfbv676-1
 INFO: [Device 21-403] Loading part xc7k70tfbv676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1325.906 ; gain = 154.328 ; free physical = 57484 ; free virtual = 69669
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1325.902 ; gain = 154.441 ; free physical = 12934 ; free virtual = 23240
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'Res_reg' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/ALU.vhd:50]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1364.031 ; gain = 192.453 ; free physical = 57397 ; free virtual = 69581
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1364.020 ; gain = 192.559 ; free physical = 12794 ; free virtual = 23121
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -85,12 +85,11 @@ Detailed RTL Component Info :
 	               27 Bit    Registers := 1     
 	                8 Bit    Registers := 288   
 +---Muxes : 
-	   4 Input     27 Bit        Muxes := 1     
+	 256 Input     27 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 302   
 	   2 Input      3 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
-	 256 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 546   
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -114,8 +113,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               27 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input     27 Bit        Muxes := 1     
-	 256 Input      2 Bit        Muxes := 1     
+	 256 Input     27 Bit        Muxes := 1     
 Module Pipline4op 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -171,80 +169,71 @@ WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[3]
 WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[2]
 WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[1]
 WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[0]
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[22]' (FDE) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[23]' (FDE) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[16]' (FDE) to 'Inst_mem/Vout_reg[11]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[18]' (FDE) to 'Inst_mem/Vout_reg[9]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[19]' (FDE) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[20]' (FDE) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[21]' (FDE) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[1]' (FDR) to 'LI_DI/out_A_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[22]' (FDE) to 'Inst_mem/Vout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[23]' (FDE) to 'Inst_mem/Vout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[19]' (FDE) to 'Inst_mem/Vout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[20]' (FDE) to 'Inst_mem/Vout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[21]' (FDE) to 'Inst_mem/Vout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[3]' (FDR) to 'LI_DI/out_A_reg[3]'
 INFO: [Synth 8-3886] merging instance 'LI_DI/out_A_reg[6]' (FDR) to 'LI_DI/out_A_reg[3]'
 INFO: [Synth 8-3886] merging instance 'LI_DI/out_A_reg[7]' (FDR) to 'LI_DI/out_A_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_A_reg[0]' (FDR) to 'LI_DI/out_B_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_A_reg[2]' (FDR) to 'LI_DI/out_B_reg[1]'
 INFO: [Synth 8-3886] merging instance 'LI_DI/out_A_reg[3]' (FDR) to 'LI_DI/out_A_reg[4]'
 INFO: [Synth 8-3886] merging instance 'LI_DI/out_A_reg[4]' (FDR) to 'LI_DI/out_A_reg[5]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[26]' (FDE) to 'Inst_mem/Vout_reg[25]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[24]' (FDE) to 'Inst_mem/Vout_reg[0]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[14]' (FDE) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[15]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[24]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[25]' (FDE) to 'Inst_mem/Vout_reg[9]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[14]' (FDE) to 'Inst_mem/Vout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[15]' (FDE) to 'Inst_mem/Vout_reg[3]'
 INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[8]' (FDE) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[10]' (FDE) to 'Inst_mem/Vout_reg[0]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[12]' (FDE) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[13]' (FDE) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[6]' (FDE) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[7]' (FDE) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[0]' (FDE) to 'Inst_mem/Vout_reg[2]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[1]' (FDE) to 'Inst_mem/Vout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[10]' (FDE) to 'Inst_mem/Vout_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[12]' (FDE) to 'Inst_mem/Vout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[13]' (FDE) to 'Inst_mem/Vout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[6]' (FDE) to 'Inst_mem/Vout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[7]' (FDE) to 'Inst_mem/Vout_reg[3]'
 INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[3]' (FDE) to 'Inst_mem/Vout_reg[4]'
 INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[4]' (FDE) to 'Inst_mem/Vout_reg[5]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Inst_mem/Vout_reg[5] )
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[4]' (FDR) to 'LI_DI/Out_C_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[4]' (FDR) to 'LI_DI/Out_C_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[5]' (FDR) to 'LI_DI/Out_C_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[6]' (FDR) to 'LI_DI/Out_C_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[7]' (FDR) to 'LI_DI/Out_C_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[5]' (FDR) to 'LI_DI/Out_C_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[6]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[4]' (FDR) to 'LI_DI/out_B_reg[4]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[5]' (FDR) to 'LI_DI/out_B_reg[4]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[6]' (FDR) to 'LI_DI/out_B_reg[4]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[7]' (FDR) to 'LI_DI/out_B_reg[4]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[4]' (FDR) to 'LI_DI/out_B_reg[5]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[5]' (FDR) to 'LI_DI/out_B_reg[6]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[6]' (FDR) to 'LI_DI/out_B_reg[7]'
 INFO: [Synth 8-3886] merging instance 'DI_EX/out_A_reg[3]' (FDR) to 'DI_EX/out_A_reg[4]'
 INFO: [Synth 8-3886] merging instance 'DI_EX/out_A_reg[4]' (FDR) to 'DI_EX/out_A_reg[7]'
 INFO: [Synth 8-3886] merging instance 'DI_EX/out_A_reg[5]' (FDR) to 'DI_EX/out_A_reg[7]'
 INFO: [Synth 8-3886] merging instance 'DI_EX/out_A_reg[6]' (FDR) to 'DI_EX/out_A_reg[7]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[7]' (FDR) to 'LI_DI/Out_C_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[0]' (FDR) to 'LI_DI/Out_C_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[2]' (FDR) to 'LI_DI/Out_C_reg[0]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[2]' (FDR) to 'LI_DI/out_OP_reg[1]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[0]' (FDR) to 'LI_DI/Out_C_reg[0]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[6]' (FDR) to 'LI_DI/Out_C_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[3]' (FDR) to 'LI_DI/Out_C_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[4]' (FDR) to 'LI_DI/Out_C_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[5]' (FDR) to 'LI_DI/Out_C_reg[3]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[7]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[7]' (FDR) to 'LI_DI/out_A_reg[5]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[0]' (FDR) to 'LI_DI/Out_C_reg[1]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[1]' (FDR) to 'LI_DI/out_OP_reg[1]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[2]' (FDR) to 'LI_DI/Out_C_reg[2]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[0]' (FDR) to 'LI_DI/Out_C_reg[1]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[6]' (FDR) to 'LI_DI/out_A_reg[5]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[3]' (FDR) to 'LI_DI/out_A_reg[5]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[4]' (FDR) to 'LI_DI/out_A_reg[5]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[5]' (FDR) to 'LI_DI/out_A_reg[5]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[7]' (FDR) to 'LI_DI/out_A_reg[5]'
 INFO: [Synth 8-3886] merging instance 'EX_MEM/out_A_reg[3]' (FD) to 'EX_MEM/out_A_reg[6]'
 INFO: [Synth 8-3886] merging instance 'EX_MEM/out_A_reg[4]' (FD) to 'EX_MEM/out_A_reg[6]'
 INFO: [Synth 8-3886] merging instance 'EX_MEM/out_A_reg[5]' (FD) to 'EX_MEM/out_A_reg[6]'
 INFO: [Synth 8-3886] merging instance 'EX_MEM/out_A_reg[6]' (FD) to 'EX_MEM/out_A_reg[7]'
 INFO: [Synth 8-3886] merging instance 'DI_EX/out_OP_reg[6]' (FDR) to 'DI_EX/out_OP_reg[7]'
-INFO: [Synth 8-3886] merging instance 'DI_EX/out_OP_reg[1]' (FDR) to 'DI_EX/out_OP_reg[2]'
 INFO: [Synth 8-3886] merging instance 'DI_EX/out_OP_reg[5]' (FDR) to 'DI_EX/out_OP_reg[7]'
 INFO: [Synth 8-3886] merging instance 'DI_EX/out_OP_reg[4]' (FDR) to 'DI_EX/out_OP_reg[7]'
 INFO: [Synth 8-3886] merging instance 'DI_EX/out_OP_reg[3]' (FDR) to 'DI_EX/out_OP_reg[7]'
-INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[7]' (FD) to 'EX_MEM/out_OP_reg[3]'
-INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[6]' (FD) to 'EX_MEM/out_OP_reg[3]'
-INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[4]' (FD) to 'EX_MEM/out_OP_reg[3]'
+INFO: [Synth 8-3886] merging instance 'DI_EX/out_OP_reg[7]' (FDR) to 'DI_EX/out_A_reg[7]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[7]' (FD) to 'EX_MEM/out_OP_reg[6]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[6]' (FD) to 'EX_MEM/out_OP_reg[5]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[4]' (FD) to 'EX_MEM/out_OP_reg[5]'
 INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[5]' (FD) to 'EX_MEM/out_OP_reg[3]'
-INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[1]' (FD) to 'EX_MEM/out_OP_reg[2]'
-INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[2]' (FDR) to 'LI_DI/Out_C_reg[0]'
-INFO: [Synth 8-3886] merging instance 'MEM_RE/out_OP_reg[6]' (FD) to 'MEM_RE/out_OP_reg[5]'
-INFO: [Synth 8-3886] merging instance 'MEM_RE/out_OP_reg[3]' (FD) to 'MEM_RE/out_OP_reg[5]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[3]' (FD) to 'EX_MEM/out_A_reg[7]'
+INFO: [Synth 8-3886] merging instance 'MEM_RE/out_A_reg[3]' (FD) to 'MEM_RE/out_OP_reg[3]'
+INFO: [Synth 8-3886] merging instance 'MEM_RE/out_OP_reg[6]' (FD) to 'MEM_RE/out_OP_reg[3]'
+INFO: [Synth 8-3886] merging instance 'MEM_RE/out_OP_reg[3]' (FD) to 'MEM_RE/out_OP_reg[4]'
 INFO: [Synth 8-3886] merging instance 'MEM_RE/out_OP_reg[5]' (FD) to 'MEM_RE/out_OP_reg[4]'
 INFO: [Synth 8-3886] merging instance 'MEM_RE/out_OP_reg[4]' (FD) to 'MEM_RE/out_OP_reg[7]'
-INFO: [Synth 8-3886] merging instance 'MEM_RE/out_OP_reg[2]' (FD) to 'MEM_RE/out_OP_reg[1]'
-INFO: [Synth 8-3886] merging instance 'EX_MEM/out_A_reg[7]' (FD) to 'EX_MEM/out_OP_reg[3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\EX_MEM/out_OP_reg[3] )
-INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[3]' (FD) to 'MEM_RE/out_A_reg[3]'
-INFO: [Synth 8-3886] merging instance 'MEM_RE/out_A_reg[3]' (FD) to 'MEM_RE/out_OP_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\EX_MEM/out_A_reg[7] )
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_A_reg[7]' (FD) to 'MEM_RE/out_OP_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MEM_RE/out_OP_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[255][0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[254][0] )
@@ -344,34 +333,43 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memo
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[160][0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[159][0] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[15][0]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][0]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[13][0]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][0]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[11][0]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][0]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[9][0]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][0]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[15][1]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][1]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[13][1]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][1]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[11][1]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][1]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[9][1]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][1]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[15][2]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][2]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[13][2]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][2]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[11][2]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][2]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[9][2]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][2]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[15][3]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][3]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[13][3]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][3]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[11][3]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][3]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[9][3]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][3]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[15][4]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][4]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[13][4]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][4]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
-INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][4]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
-INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][4]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
-INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][5]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
-INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][5]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
-INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][5]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
-INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][5]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
-INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][6]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
-INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][6]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
-INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][6]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
-INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][6]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[11][4]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[15]) is unused and will be removed from module My_processor.
 WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[14]) is unused and will be removed from module My_processor.
@@ -475,7 +473,7 @@ WARNING: [Synth 8-3332] Sequential element (data_meme_reg[244][5]) is unused and
 WARNING: [Synth 8-3332] Sequential element (data_meme_reg[244][4]) is unused and will be removed from module Data_mem.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1466.344 ; gain = 294.766 ; free physical = 57287 ; free virtual = 69479
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1468.332 ; gain = 296.871 ; free physical = 12691 ; free virtual = 23029
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -488,7 +486,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1466.344 ; gain = 294.766 ; free physical = 57287 ; free virtual = 69479
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1468.332 ; gain = 296.871 ; free physical = 12691 ; free virtual = 23030
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -500,7 +498,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57288 ; free virtual = 69479
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1476.340 ; gain = 304.879 ; free physical = 12692 ; free virtual = 23031
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -524,7 +522,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1476.340 ; gain = 304.879 ; free physical = 12692 ; free virtual = 23032
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -537,7 +535,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1476.340 ; gain = 304.879 ; free physical = 12692 ; free virtual = 23032
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -549,25 +547,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1476.340 ; gain = 304.879 ; free physical = 12692 ; free virtual = 23032
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1476.340 ; gain = 304.879 ; free physical = 12692 ; free virtual = 23032
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1476.340 ; gain = 304.879 ; free physical = 12692 ; free virtual = 23032
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1476.340 ; gain = 304.879 ; free physical = 12692 ; free virtual = 23032
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -584,40 +582,41 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |     8|
+|2     |CARRY4 |    10|
 |3     |LUT1   |     1|
-|4     |LUT2   |    20|
-|5     |LUT3   |    23|
-|6     |LUT4   |    16|
-|7     |LUT5   |    22|
-|8     |LUT6   |    43|
-|9     |FDRE   |   103|
-|10    |LD     |     8|
-|11    |IBUF   |     1|
-|12    |OBUF   |     8|
+|4     |LUT2   |    29|
+|5     |LUT3   |    14|
+|6     |LUT4   |    24|
+|7     |LUT5   |    25|
+|8     |LUT6   |    81|
+|9     |MUXF7  |     4|
+|10    |FDRE   |   137|
+|11    |LD     |     8|
+|12    |IBUF   |     1|
+|13    |OBUF   |     8|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+----------------+-----------------+------+
 |      |Instance        |Module           |Cells |
 +------+----------------+-----------------+------+
-|1     |top             |                 |   254|
-|2     |  DI_EX         |Pipline4op       |    79|
-|3     |  EX_MEM        |Pipeline3Op      |    21|
-|4     |  Inst_mem      |Instruction_mem  |    19|
-|5     |  LI_DI         |Pipline4op_0     |    15|
-|6     |  MEM_RE        |Pipeline3Op_1    |    25|
-|7     |  mon_ALU       |ALU              |    20|
-|8     |  register_bank |Banc_De_Registre |    48|
+|1     |top             |                 |   343|
+|2     |  DI_EX         |Pipline4op       |    89|
+|3     |  EX_MEM        |Pipeline3Op      |    22|
+|4     |  Inst_mem      |Instruction_mem  |    31|
+|5     |  LI_DI         |Pipline4op_0     |    22|
+|6     |  MEM_RE        |Pipeline3Op_1    |    20|
+|7     |  mon_ALU       |ALU              |    24|
+|8     |  register_bank |Banc_De_Registre |   108|
 +------+----------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1476.340 ; gain = 304.879 ; free physical = 12692 ; free virtual = 23032
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2147 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57297 ; free virtual = 69489
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1467.359 ; gain = 295.773 ; free physical = 57300 ; free virtual = 69492
+Synthesis finished with 0 errors, 0 critical warnings and 2090 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1476.340 ; gain = 304.879 ; free physical = 12697 ; free virtual = 23036
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1476.348 ; gain = 304.879 ; free physical = 12712 ; free virtual = 23051
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -628,9 +627,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 234 Infos, 118 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1580.379 ; gain = 420.555 ; free physical = 57278 ; free virtual = 69470
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1580.367 ; gain = 420.547 ; free physical = 12672 ; free virtual = 23026
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.runs/synth_1/My_processor.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file My_processor_utilization_synth.rpt -pb My_processor_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1604.391 ; gain = 0.000 ; free physical = 57273 ; free virtual = 69465
-INFO: [Common 17-206] Exiting Vivado at Tue May 30 20:46:48 2023...
+report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1604.379 ; gain = 0.000 ; free physical = 12671 ; free virtual = 23025
+INFO: [Common 17-206] Exiting Vivado at Tue May 30 22:17:34 2023...
