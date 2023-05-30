@@ -4,4 +4,22 @@ Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.Instruction_mem [instruction_mem_default]
+Compiling architecture behavioral of entity xil_defaultlib.Pipline4op [pipline4op_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.Pipeline3Op [pipeline3op_default]
+Compiling architecture behavioral of entity xil_defaultlib.Data_mem [data_mem_default]
+Compiling architecture behavioral of entity xil_defaultlib.Banc_De_Registre [banc_de_registre_default]
+Compiling architecture behavioral of entity xil_defaultlib.My_processor [my_processor_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_microproc
+Built simulation snapshot Test_MicroProc_behav

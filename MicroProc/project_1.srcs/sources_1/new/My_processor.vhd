@@ -54,11 +54,13 @@ architecture Behavioral of My_processor is
 component Instruction_mem 
     Port ( Add : in STD_LOGIC_vector (7 downto 0);
            Clk : in STD_LOGIC;
+           Alea : in std_logic;
            Vout : out STD_LOGIC_vector (31 downto 0));
 end component;
 
 component Pipline4op --LI/DI and DI/EX
-    Port ( Clk    : in std_logic;
+    Port ( Alea   : in STD_LOGIC;
+           Clk   : in std_logic;
            in_A   : in STD_LOGIC_vector(7 downto 0);
            In_OP  : in STD_LOGIC_vector(7 downto 0);
            In_B   : in STD_LOGIC_vector(7 downto 0);
@@ -112,7 +114,7 @@ end component;
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
---------------------------------------------------------------Fin de Declaration des composants--------------------------------------------------------------------- 
+----------------------Add----------------------------------------Fin de Declaration des composants--------------------------------------------------------------------- 
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -163,7 +165,7 @@ signal output_S_ALU     : std_logic_vector(7 downto 0);
 signal output_MUX_ALU   : std_logic_vector(7 downto 0);
 signal LC_ALU           : std_logic_vector(2 downto 0);
 
---étage Mémoire des données
+--étage Mémoire output_OP_LI_DIdes données
 signal output_MUX_Data_Mem1 : std_logic_vector(7 downto 0);
 signal LC_Data_Mem          : std_logic;
 signal output_MUX_Data_Mem2 : std_logic_vector(7 downto 0);
@@ -173,6 +175,16 @@ signal output_Data_memory   : std_logic_vector(7 downto 0);
 signal output_LC_Last      : std_logic;
 signal output_B_Last       : std_logic_vector(7 downto 0);
 
+--Signal instruction pointer
+signal IP                  : std_logic_vector(7 downto 0):="00000000";
+
+--Signal gestion des alea
+signal Alea                : std_logic :='0';
+--signal stop                : std_logic :='0';
+signal read_li             : std_logic :='0';
+signal write_di            : std_logic :='0';
+signal write_ex            : std_logic :='0';
+signal write_mem           : std_logic :='0';
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -185,13 +197,15 @@ begin
 
 ------------------------------------------------------------------------Port Mapping------------------------------------------------------------------------------ 
 Inst_mem : Instruction_mem 
-    Port map (  Add => Addr ,
+    Port map (  Add => IP ,
                 Clk => Clk,
+                Alea=>Alea,
                 Vout => output_inst_mem);
 
 --Link between Inst_mem and LI/DI
 LI_DI : pipline4op
-port map    (   Clk  => clk,  
+port map    (   Alea   => Alea,
+                Clk    => clk,  
                 in_OP  => output_inst_mem(31 downto 24),
                 In_A   => output_inst_mem(23 downto 16),
                 In_B   => output_inst_mem(15 downto 8),
@@ -206,10 +220,20 @@ port map    (   Clk  => clk,
 Output_MUX_BR <= output_B_LI_DI when (output_op_LI_DI = x"06" or output_op_LI_DI = x"07")
                                 else output_QA_BR;
 
-                                
+--Affecting the proper value for the read_li signal
+read_li   <= '1' when (output_inst_mem(31 downto 24) /= x"00" and output_inst_mem(31 downto 24) /= x"07" and output_inst_mem(31 downto 24) /=x"06") else '0';
+write_di  <= '1' when (output_inst_mem(31 downto 24) /= x"00" and output_inst_mem(31 downto 24) /= x"08") else '0';
+write_ex  <= '1' when (output_OP_LI_DI /= x"00" and output_OP_LI_DI /= x"08") else '0';
+write_mem <= '1' when (output_OP_DI_EX /= x"08" and output_OP_DI_EX /= x"00") else '0';
+
+alea     <= '1' when (read_li ='1' and write_di ='1'   and (output_A_LI_DI = output_inst_mem(15 downto 8)  or output_A_LI_DI=output_inst_mem(7 downto 0))) or 
+                     (read_li ='1' and write_ex = '1'  and (output_inst_mem(15 downto 8) = output_A_DI_EX  or output_inst_mem(7 downto 0)=output_A_DI_EX)) or 
+                     (read_li ='1' and write_mem = '1' and (output_inst_mem(15 downto 8) = output_A_EX_MEM or output_inst_mem(7 downto 0)=output_A_EX_MEM))
+                     else '0'; 
                 
 DI_EX : pipline4op
-port map    (   Clk    => clk,  
+port map    (   Alea   => '0', 
+                Clk    => clk,  
                 in_A   => output_A_LI_DI,
                 In_OP  => output_OP_LI_DI,
                 In_B   => Output_MUX_BR,
@@ -219,10 +243,10 @@ port map    (   Clk    => clk,
                 out_B  => output_B_DI_EX,
                 Out_C  => output_C_DI_EX);
                 
---Controls which operation will be done by the ALU
+--Controls which operation will be done by the ALUoutput_OP_EX_MEM
 LC_ALU <= "001" WHEN  output_OP_DI_EX = x"01" else -- Addition
-          "010" WHEN  output_OP_DI_EX = x"02" else -- Soustraction
-          "100" WHEN  output_OP_DI_EX = x"03" else -- Multiplication
+          "010" WHEN  output_OP_DI_EX = x"03" else -- Soustraction
+          "100" WHEN  output_OP_DI_EX = x"02" else -- Multiplication
           "000"; -- La division n'est pas demandé étant donné que le fpga ne comprend pas de diviseur 
           --NB : une division par deux aurait pu être possible en shiftant à gauche
           
@@ -249,7 +273,7 @@ port map    (   Clk    => clk,
                 out_A  => output_A_EX_MEM,
                 out_OP => output_OP_EX_MEM, 
                 out_B  => output_B_EX_MEM);               
---Only 'r' is Store                 
+--Only 'r' is Storerite_di <= '0' when di_op="00001000" else '1';
 LC_Data_Mem <=  '0' when output_OP_EX_MEM = x"08" else '1';   
 
 
@@ -297,5 +321,16 @@ port map    (   Addr_A => output_B_LI_DI(3 downto 0),
                 QA     => output_QA_BR,
                 QB     => output_QB_BR);
 
-    Output_proc <=  output_B_MEM_RE;                  
+    
+process
+begin
+    wait until clk'event and clk='1';
+        
+        if (alea = '0') then
+            IP <= IP + '1';
+        end if;
+    
+        
+end process; 
+Output_proc <=  output_B_MEM_RE;                 
 end Behavioral; 

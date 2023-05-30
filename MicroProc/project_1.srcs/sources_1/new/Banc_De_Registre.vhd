@@ -47,7 +47,7 @@ end Banc_De_Registre;
 architecture Behavioral of Banc_De_Registre is
 
 type tab is array(0 to 15) of std_logic_vector(7 downto 0); 
-Signal reg_tab : tab := (others =>(others=>'0'));
+signal reg_tab  : tab := (others=>(others => '0'));
 --Signal i : integer ; -- to change 
 
 begin

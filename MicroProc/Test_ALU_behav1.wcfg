@@ -3,53 +3,327 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="Test_Banc_de_registre_behav.wdb" id="1">
+      <db_ref path="Test_MicroProc_behav.wdb" id="1">
          <top_modules>
-            <top_module name="Test_Banc_de_registre" />
+            <top_module name="Test_MicroProc" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1274653467fs"></ZoomEndTime>
-      <Cursor1Time time="528515000fs"></Cursor1Time>
+      <ZoomEndTime time="90300001fs"></ZoomEndTime>
+      <Cursor1Time time="35500000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="138"></ValueColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="7" />
-   <wvobject type="logic" fp_name="/Test_Banc_de_registre/Clk">
+   <WVObjectSize size="16" />
+   <wvobject type="array" fp_name="/Test_MicroProc/uut/Inst_mem/Add">
+      <obj_property name="ElementShortName">Add[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Add[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Test_MicroProc/uut/IP">
+      <obj_property name="ElementShortName">IP[7:0]</obj_property>
+      <obj_property name="ObjectShortName">IP[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Test_MicroProc/uut/Inst_mem/Clk">
       <obj_property name="ElementShortName">Clk</obj_property>
       <obj_property name="ObjectShortName">Clk</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Test_Banc_de_registre/Addr_A">
-      <obj_property name="ElementShortName">Addr_A[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Addr_A[3:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+   <wvobject type="array" fp_name="/Test_MicroProc/uut/Inst_mem/Vout">
+      <obj_property name="ElementShortName">Vout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Vout[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Test_Banc_de_registre/Addr_B">
-      <obj_property name="ElementShortName">Addr_B[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Addr_B[3:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+   <wvobject type="logic" fp_name="/Test_MicroProc/uut/stop">
+      <obj_property name="ElementShortName">stop</obj_property>
+      <obj_property name="ObjectShortName">stop</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Test_Banc_de_registre/Addr_W">
-      <obj_property name="ElementShortName">Addr_W[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Addr_W[3:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+   <wvobject type="logic" fp_name="/Test_MicroProc/uut/LI_DI/alea">
+      <obj_property name="ElementShortName">alea</obj_property>
+      <obj_property name="ObjectShortName">alea</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/Test_Banc_de_registre/W">
-      <obj_property name="ElementShortName">W</obj_property>
-      <obj_property name="ObjectShortName">W</obj_property>
+   <wvobject type="logic" fp_name="/Test_MicroProc/uut/read_li">
+      <obj_property name="ElementShortName">read_li</obj_property>
+      <obj_property name="ObjectShortName">read_li</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Test_Banc_de_registre/QA">
-      <obj_property name="ElementShortName">QA[7:0]</obj_property>
-      <obj_property name="ObjectShortName">QA[7:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+   <wvobject type="logic" fp_name="/Test_MicroProc/uut/write_di">
+      <obj_property name="ElementShortName">write_di</obj_property>
+      <obj_property name="ObjectShortName">write_di</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Test_Banc_de_registre/QB">
-      <obj_property name="ElementShortName">QB[7:0]</obj_property>
-      <obj_property name="ObjectShortName">QB[7:0]</obj_property>
+   <wvobject type="logic" fp_name="/Test_MicroProc/uut/write_ex">
+      <obj_property name="ElementShortName">write_ex</obj_property>
+      <obj_property name="ObjectShortName">write_ex</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group395">
+      <obj_property name="label">lidi</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/LI_DI/alea">
+         <obj_property name="ElementShortName">alea</obj_property>
+         <obj_property name="ObjectShortName">alea</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/LI_DI/Clk">
+         <obj_property name="ElementShortName">Clk</obj_property>
+         <obj_property name="ObjectShortName">Clk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/LI_DI/in_A">
+         <obj_property name="ElementShortName">in_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/LI_DI/In_OP">
+         <obj_property name="ElementShortName">In_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">In_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/LI_DI/In_B">
+         <obj_property name="ElementShortName">In_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">In_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/LI_DI/in_C">
+         <obj_property name="ElementShortName">in_C[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_C[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/LI_DI/out_A">
+         <obj_property name="ElementShortName">out_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/LI_DI/out_OP">
+         <obj_property name="ElementShortName">out_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/LI_DI/out_B">
+         <obj_property name="ElementShortName">out_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/LI_DI/Out_C">
+         <obj_property name="ElementShortName">Out_C[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Out_C[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group406">
+      <obj_property name="label">di_ex</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/DI_EX/alea">
+         <obj_property name="ElementShortName">alea</obj_property>
+         <obj_property name="ObjectShortName">alea</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/DI_EX/Clk">
+         <obj_property name="ElementShortName">Clk</obj_property>
+         <obj_property name="ObjectShortName">Clk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/DI_EX/in_A">
+         <obj_property name="ElementShortName">in_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/DI_EX/In_OP">
+         <obj_property name="ElementShortName">In_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">In_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/DI_EX/In_B">
+         <obj_property name="ElementShortName">In_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">In_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/DI_EX/in_C">
+         <obj_property name="ElementShortName">in_C[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_C[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/DI_EX/out_A">
+         <obj_property name="ElementShortName">out_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/DI_EX/out_OP">
+         <obj_property name="ElementShortName">out_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/DI_EX/out_B">
+         <obj_property name="ElementShortName">out_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/DI_EX/Out_C">
+         <obj_property name="ElementShortName">Out_C[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Out_C[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group416">
+      <obj_property name="label">alu</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/mon_ALU/A">
+         <obj_property name="ElementShortName">A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/mon_ALU/B">
+         <obj_property name="ElementShortName">B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/mon_ALU/Ctrl_Alu">
+         <obj_property name="ElementShortName">Ctrl_Alu[2:0]</obj_property>
+         <obj_property name="ObjectShortName">Ctrl_Alu[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/mon_ALU/N">
+         <obj_property name="ElementShortName">N</obj_property>
+         <obj_property name="ObjectShortName">N</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/mon_ALU/O">
+         <obj_property name="ElementShortName">O</obj_property>
+         <obj_property name="ObjectShortName">O</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/mon_ALU/Z">
+         <obj_property name="ElementShortName">Z</obj_property>
+         <obj_property name="ObjectShortName">Z</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/mon_ALU/C">
+         <obj_property name="ElementShortName">C</obj_property>
+         <obj_property name="ObjectShortName">C</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/mon_ALU/S">
+         <obj_property name="ElementShortName">S[7:0]</obj_property>
+         <obj_property name="ObjectShortName">S[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/mon_ALU/Res">
+         <obj_property name="ElementShortName">Res[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Res[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group424">
+      <obj_property name="label">ex_mem</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/EX_MEM/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/EX_MEM/in_A">
+         <obj_property name="ElementShortName">in_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/EX_MEM/in_B">
+         <obj_property name="ElementShortName">in_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/EX_MEM/in_OP">
+         <obj_property name="ElementShortName">in_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/EX_MEM/out_A">
+         <obj_property name="ElementShortName">out_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/EX_MEM/out_B">
+         <obj_property name="ElementShortName">out_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/EX_MEM/out_OP">
+         <obj_property name="ElementShortName">out_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_OP[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group432">
+      <obj_property name="label">data_mem</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/Data_memory/Addr">
+         <obj_property name="ElementShortName">Addr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Addr[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/Data_memory/VIN">
+         <obj_property name="ElementShortName">VIN[7:0]</obj_property>
+         <obj_property name="ObjectShortName">VIN[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/Data_memory/RW">
+         <obj_property name="ElementShortName">RW</obj_property>
+         <obj_property name="ObjectShortName">RW</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/Data_memory/Rst">
+         <obj_property name="ElementShortName">Rst</obj_property>
+         <obj_property name="ObjectShortName">Rst</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/Data_memory/Clk">
+         <obj_property name="ElementShortName">Clk</obj_property>
+         <obj_property name="ObjectShortName">Clk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/Data_memory/VOUT">
+         <obj_property name="ElementShortName">VOUT[7:0]</obj_property>
+         <obj_property name="ObjectShortName">VOUT[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/Data_memory/data_meme">
+         <obj_property name="ElementShortName">data_meme[255:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_meme[255:0][7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group440">
+      <obj_property name="label">mem_re</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/MEM_RE/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/MEM_RE/in_A">
+         <obj_property name="ElementShortName">in_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/MEM_RE/in_B">
+         <obj_property name="ElementShortName">in_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/MEM_RE/in_OP">
+         <obj_property name="ElementShortName">in_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/MEM_RE/out_A">
+         <obj_property name="ElementShortName">out_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/MEM_RE/out_B">
+         <obj_property name="ElementShortName">out_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/MEM_RE/out_OP">
+         <obj_property name="ElementShortName">out_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_OP[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group451">
+      <obj_property name="label">BR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/register_bank/Addr_A">
+         <obj_property name="ElementShortName">Addr_A[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Addr_A[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/register_bank/Addr_B">
+         <obj_property name="ElementShortName">Addr_B[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Addr_B[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/register_bank/Addr_W">
+         <obj_property name="ElementShortName">Addr_W[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Addr_W[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/register_bank/W">
+         <obj_property name="ElementShortName">W</obj_property>
+         <obj_property name="ObjectShortName">W</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/register_bank/Data">
+         <obj_property name="ElementShortName">Data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Data[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/register_bank/Rst">
+         <obj_property name="ElementShortName">Rst</obj_property>
+         <obj_property name="ObjectShortName">Rst</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Test_MicroProc/uut/register_bank/Clk">
+         <obj_property name="ElementShortName">Clk</obj_property>
+         <obj_property name="ObjectShortName">Clk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/register_bank/QA">
+         <obj_property name="ElementShortName">QA[7:0]</obj_property>
+         <obj_property name="ObjectShortName">QA[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/register_bank/QB">
+         <obj_property name="ElementShortName">QB[7:0]</obj_property>
+         <obj_property name="ObjectShortName">QB[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Test_MicroProc/uut/register_bank/reg_tab">
+         <obj_property name="ElementShortName">reg_tab[0:15][7:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_tab[0:15][7:0]</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

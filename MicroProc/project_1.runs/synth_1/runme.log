@@ -14,39 +14,45 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 59644 
+INFO: Helper process launched with PID 63509 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.270 ; gain = 83.828 ; free physical = 10734 ; free virtual = 21890
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.277 ; gain = 83.699 ; free physical = 57507 ; free virtual = 69690
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'My_processor' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:42]
-INFO: [Synth 8-3491] module 'Instruction_mem' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Instruction_mem.vhd:34' bound to instance 'Inst_mem' of component 'Instruction_mem' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:187]
-INFO: [Synth 8-638] synthesizing module 'Instruction_mem' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Instruction_mem.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'Instruction_mem' (1#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Instruction_mem.vhd:40]
-INFO: [Synth 8-3491] module 'Pipline4op' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipline4op.vhd:34' bound to instance 'LI_DI' of component 'Pipline4op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:193]
-INFO: [Synth 8-638] synthesizing module 'Pipline4op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipline4op.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'Pipline4op' (2#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipline4op.vhd:46]
-INFO: [Synth 8-3491] module 'Pipline4op' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipline4op.vhd:34' bound to instance 'DI_EX' of component 'Pipline4op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:211]
-INFO: [Synth 8-3491] module 'ALU' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/ALU.vhd:37' bound to instance 'mon_ALU' of component 'ALU' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:229]
+INFO: [Synth 8-3491] module 'Instruction_mem' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Instruction_mem.vhd:34' bound to instance 'Inst_mem' of component 'Instruction_mem' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:199]
+INFO: [Synth 8-638] synthesizing module 'Instruction_mem' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Instruction_mem.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'Instruction_mem' (1#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Instruction_mem.vhd:41]
+INFO: [Synth 8-3491] module 'Pipline4op' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipline4op.vhd:34' bound to instance 'LI_DI' of component 'Pipline4op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:206]
+INFO: [Synth 8-638] synthesizing module 'Pipline4op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipline4op.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'Pipline4op' (2#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipline4op.vhd:47]
+INFO: [Synth 8-3491] module 'Pipline4op' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipline4op.vhd:34' bound to instance 'DI_EX' of component 'Pipline4op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:234]
+INFO: [Synth 8-3491] module 'ALU' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/ALU.vhd:37' bound to instance 'mon_ALU' of component 'ALU' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:253]
 INFO: [Synth 8-638] synthesizing module 'ALU' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/ALU.vhd:45]
 INFO: [Synth 8-256] done synthesizing module 'ALU' (3#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/ALU.vhd:45]
-INFO: [Synth 8-3491] module 'Pipeline3Op' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipeline3Op.vhd:34' bound to instance 'EX_MEM' of component 'pipeline3op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:244]
+INFO: [Synth 8-3491] module 'Pipeline3Op' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipeline3Op.vhd:34' bound to instance 'EX_MEM' of component 'pipeline3op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:268]
 INFO: [Synth 8-638] synthesizing module 'Pipeline3Op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipeline3Op.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'Pipeline3Op' (4#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipeline3Op.vhd:44]
-INFO: [Synth 8-3491] module 'Data_mem' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Data_mem.vhd:34' bound to instance 'Data_memory' of component 'Data_mem' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:262]
+INFO: [Synth 8-3491] module 'Data_mem' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Data_mem.vhd:34' bound to instance 'Data_memory' of component 'Data_mem' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:286]
 INFO: [Synth 8-638] synthesizing module 'Data_mem' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Data_mem.vhd:43]
 INFO: [Synth 8-256] done synthesizing module 'Data_mem' (5#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Data_mem.vhd:43]
-INFO: [Synth 8-3491] module 'Pipeline3Op' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipeline3Op.vhd:34' bound to instance 'MEM_RE' of component 'pipeline3op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:273]
-INFO: [Synth 8-3491] module 'Banc_De_Registre' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Banc_De_Registre.vhd:35' bound to instance 'register_bank' of component 'Banc_de_registre' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:289]
+INFO: [Synth 8-3491] module 'Pipeline3Op' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipeline3Op.vhd:34' bound to instance 'MEM_RE' of component 'pipeline3op' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:297]
+INFO: [Synth 8-3491] module 'Banc_De_Registre' declared at '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Banc_De_Registre.vhd:35' bound to instance 'register_bank' of component 'Banc_de_registre' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:313]
 INFO: [Synth 8-638] synthesizing module 'Banc_De_Registre' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Banc_De_Registre.vhd:47]
 INFO: [Synth 8-256] done synthesizing module 'Banc_De_Registre' (6#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Banc_De_Registre.vhd:47]
 INFO: [Synth 8-256] done synthesizing module 'My_processor' (7#1) [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/My_processor.vhd:42]
-WARNING: [Synth 8-3331] design Pipeline3Op has unconnected port clk
-WARNING: [Synth 8-3331] design Pipline4op has unconnected port Clk
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[7]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[6]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[5]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[4]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[3]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[2]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[1]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1316.895 ; gain = 145.453 ; free physical = 10724 ; free virtual = 21880
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1317.902 ; gain = 146.324 ; free physical = 57486 ; free virtual = 69669
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1316.895 ; gain = 145.453 ; free physical = 10730 ; free virtual = 21886
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1317.902 ; gain = 146.324 ; free physical = 57485 ; free virtual = 69670
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -54,11 +60,11 @@ Start Loading Part and Timing Information
 Loading part: xc7k70tfbv676-1
 INFO: [Device 21-403] Loading part xc7k70tfbv676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1324.898 ; gain = 153.457 ; free physical = 10729 ; free virtual = 21885
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1325.906 ; gain = 154.328 ; free physical = 57484 ; free virtual = 69669
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'Res_reg' [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/ALU.vhd:50]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1364.055 ; gain = 192.613 ; free physical = 10647 ; free virtual = 21803
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1364.031 ; gain = 192.453 ; free physical = 57397 ; free virtual = 69581
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -73,15 +79,17 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
-	               28 Bit    Registers := 1     
-	                8 Bit    Registers := 273   
+	               27 Bit    Registers := 1     
+	                8 Bit    Registers := 288   
 +---Muxes : 
-	 256 Input     28 Bit        Muxes := 1     
+	   4 Input     27 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 302   
 	   2 Input      3 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
+	 256 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 546   
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -92,6 +100,10 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module My_processor 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 4     
 	   2 Input      3 Bit        Muxes := 1     
@@ -99,9 +111,14 @@ Detailed RTL Component Info :
 Module Instruction_mem 
 Detailed RTL Component Info : 
 +---Registers : 
-	               28 Bit    Registers := 1     
+	               27 Bit    Registers := 1     
 +---Muxes : 
-	 256 Input     28 Bit        Muxes := 1     
+	   4 Input     27 Bit        Muxes := 1     
+	 256 Input      2 Bit        Muxes := 1     
+Module Pipline4op 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 4     
 Module ALU 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -109,6 +126,10 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
+Module Pipeline3Op 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 3     
 Module Data_mem 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -140,20 +161,217 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[20]' (FD) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[4]' (FD) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[5]' (FD) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[6]' (FD) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[7]' (FD) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[21]' (FD) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[22]' (FD) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[23]' (FD) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[3]' (FD) to 'Inst_mem/Vout_reg[1]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[1]' (FD) to 'Inst_mem/Vout_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[12]' (FD) to 'Inst_mem/Vout_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[13]' (FD) to 'Inst_mem/Vout_reg[14]'
-INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[14]' (FD) to 'Inst_mem/Vout_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Inst_mem/Vout_reg[15] )
+WARNING: [Synth 8-3936] Found unconnected internal register 'MEM_RE/out_A_reg' and it is trimmed from '8' to '4' bits. [/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.srcs/sources_1/new/Pipeline3Op.vhd:50]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[7]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[6]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[5]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[4]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[3]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[2]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[1]
+WARNING: [Synth 8-3331] design My_processor has unconnected port Addr[0]
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[22]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[23]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[16]' (FDE) to 'Inst_mem/Vout_reg[11]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[18]' (FDE) to 'Inst_mem/Vout_reg[9]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[19]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[20]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[21]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[1]' (FDR) to 'LI_DI/out_A_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_A_reg[6]' (FDR) to 'LI_DI/out_A_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_A_reg[7]' (FDR) to 'LI_DI/out_A_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_A_reg[0]' (FDR) to 'LI_DI/out_B_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_A_reg[2]' (FDR) to 'LI_DI/out_B_reg[1]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_A_reg[3]' (FDR) to 'LI_DI/out_A_reg[4]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_A_reg[4]' (FDR) to 'LI_DI/out_A_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[26]' (FDE) to 'Inst_mem/Vout_reg[25]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[24]' (FDE) to 'Inst_mem/Vout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[14]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[15]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[8]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[10]' (FDE) to 'Inst_mem/Vout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[12]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[13]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[6]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[7]' (FDE) to 'Inst_mem/Vout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[0]' (FDE) to 'Inst_mem/Vout_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[1]' (FDE) to 'Inst_mem/Vout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[3]' (FDE) to 'Inst_mem/Vout_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Inst_mem/Vout_reg[4]' (FDE) to 'Inst_mem/Vout_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Inst_mem/Vout_reg[5] )
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[4]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[4]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[5]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[6]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[7]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[5]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[6]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'DI_EX/out_A_reg[3]' (FDR) to 'DI_EX/out_A_reg[4]'
+INFO: [Synth 8-3886] merging instance 'DI_EX/out_A_reg[4]' (FDR) to 'DI_EX/out_A_reg[7]'
+INFO: [Synth 8-3886] merging instance 'DI_EX/out_A_reg[5]' (FDR) to 'DI_EX/out_A_reg[7]'
+INFO: [Synth 8-3886] merging instance 'DI_EX/out_A_reg[6]' (FDR) to 'DI_EX/out_A_reg[7]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[7]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[0]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_B_reg[2]' (FDR) to 'LI_DI/Out_C_reg[0]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[2]' (FDR) to 'LI_DI/out_OP_reg[1]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[0]' (FDR) to 'LI_DI/Out_C_reg[0]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[6]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[3]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[4]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[5]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/out_OP_reg[7]' (FDR) to 'LI_DI/Out_C_reg[3]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_A_reg[3]' (FD) to 'EX_MEM/out_A_reg[6]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_A_reg[4]' (FD) to 'EX_MEM/out_A_reg[6]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_A_reg[5]' (FD) to 'EX_MEM/out_A_reg[6]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_A_reg[6]' (FD) to 'EX_MEM/out_A_reg[7]'
+INFO: [Synth 8-3886] merging instance 'DI_EX/out_OP_reg[6]' (FDR) to 'DI_EX/out_OP_reg[7]'
+INFO: [Synth 8-3886] merging instance 'DI_EX/out_OP_reg[1]' (FDR) to 'DI_EX/out_OP_reg[2]'
+INFO: [Synth 8-3886] merging instance 'DI_EX/out_OP_reg[5]' (FDR) to 'DI_EX/out_OP_reg[7]'
+INFO: [Synth 8-3886] merging instance 'DI_EX/out_OP_reg[4]' (FDR) to 'DI_EX/out_OP_reg[7]'
+INFO: [Synth 8-3886] merging instance 'DI_EX/out_OP_reg[3]' (FDR) to 'DI_EX/out_OP_reg[7]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[7]' (FD) to 'EX_MEM/out_OP_reg[3]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[6]' (FD) to 'EX_MEM/out_OP_reg[3]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[4]' (FD) to 'EX_MEM/out_OP_reg[3]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[5]' (FD) to 'EX_MEM/out_OP_reg[3]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[1]' (FD) to 'EX_MEM/out_OP_reg[2]'
+INFO: [Synth 8-3886] merging instance 'LI_DI/Out_C_reg[2]' (FDR) to 'LI_DI/Out_C_reg[0]'
+INFO: [Synth 8-3886] merging instance 'MEM_RE/out_OP_reg[6]' (FD) to 'MEM_RE/out_OP_reg[5]'
+INFO: [Synth 8-3886] merging instance 'MEM_RE/out_OP_reg[3]' (FD) to 'MEM_RE/out_OP_reg[5]'
+INFO: [Synth 8-3886] merging instance 'MEM_RE/out_OP_reg[5]' (FD) to 'MEM_RE/out_OP_reg[4]'
+INFO: [Synth 8-3886] merging instance 'MEM_RE/out_OP_reg[4]' (FD) to 'MEM_RE/out_OP_reg[7]'
+INFO: [Synth 8-3886] merging instance 'MEM_RE/out_OP_reg[2]' (FD) to 'MEM_RE/out_OP_reg[1]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_A_reg[7]' (FD) to 'EX_MEM/out_OP_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\EX_MEM/out_OP_reg[3] )
+INFO: [Synth 8-3886] merging instance 'EX_MEM/out_OP_reg[3]' (FD) to 'MEM_RE/out_A_reg[3]'
+INFO: [Synth 8-3886] merging instance 'MEM_RE/out_A_reg[3]' (FD) to 'MEM_RE/out_OP_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MEM_RE/out_OP_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[255][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[254][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[253][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[252][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[251][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[250][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[249][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[248][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[247][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[246][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[245][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[244][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[243][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[242][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[241][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[240][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[239][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[238][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[237][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[236][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[235][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[234][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[233][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[232][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[231][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[230][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[229][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[228][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[227][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[226][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[225][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[224][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[223][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[222][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[221][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[220][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[219][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[218][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[217][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[216][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[215][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[214][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[213][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[212][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[211][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[210][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[209][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[208][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[207][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[206][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[205][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[204][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[203][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[202][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[201][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[200][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[199][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[198][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[197][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[196][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[195][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[194][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[193][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[192][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[191][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[190][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[189][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[188][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[187][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[186][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[185][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[184][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[183][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[182][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[181][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[180][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[179][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[178][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[177][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[176][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[175][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[174][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[173][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[172][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[171][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[170][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[169][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[168][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[167][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[166][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[165][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[164][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[163][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[162][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[161][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[160][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Data_memory/\data_meme_reg[159][0] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][0]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][0]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][0]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][0]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][1]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][1]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][1]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][1]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][2]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][2]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][2]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][2]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][3]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][3]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][3]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][3]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][4]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][4]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][4]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][4]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][5]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][5]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][5]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][5]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[14][6]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[12][6]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[10][6]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Synth 8-3886] merging instance 'register_bank/reg_tab_reg[8][6]' (FDE) to 'register_bank/reg_tab_reg[14][7]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[15]) is unused and will be removed from module My_processor.
 WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[14]) is unused and will be removed from module My_processor.
 WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[13]) is unused and will be removed from module My_processor.
@@ -162,9 +380,101 @@ WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[11]) is unused and w
 WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[10]) is unused and will be removed from module My_processor.
 WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[9]) is unused and will be removed from module My_processor.
 WARNING: [Synth 8-3332] Sequential element (mon_ALU/Res_reg[8]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Inst_mem/Vout_reg[15]) is unused and will be removed from module My_processor.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[255][7]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[255][6]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[255][5]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[255][4]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[255][3]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[255][2]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[255][1]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[255][0]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[254][7]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[254][6]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[254][5]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[254][4]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[254][3]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[254][2]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[254][1]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[254][0]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[253][7]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[253][6]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[253][5]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[253][4]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[253][3]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[253][2]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[253][1]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[253][0]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[252][7]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[252][6]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[252][5]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[252][4]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[252][3]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[252][2]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[252][1]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[252][0]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[251][7]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[251][6]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[251][5]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[251][4]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[251][3]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[251][2]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[251][1]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[251][0]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[250][7]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[250][6]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[250][5]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[250][4]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[250][3]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[250][2]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[250][1]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[250][0]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[249][7]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[249][6]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[249][5]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[249][4]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[249][3]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[249][2]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[249][1]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[249][0]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[248][7]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[248][6]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[248][5]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[248][4]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[248][3]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[248][2]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[248][1]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[248][0]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[247][7]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[247][6]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[247][5]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[247][4]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[247][3]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[247][2]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[247][1]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[247][0]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[246][7]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[246][6]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[246][5]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[246][4]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[246][3]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[246][2]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[246][1]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[246][0]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[245][7]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[245][6]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[245][5]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[245][4]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[245][3]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[245][2]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[245][1]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[245][0]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[244][7]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[244][6]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[244][5]) is unused and will be removed from module Data_mem.
+WARNING: [Synth 8-3332] Sequential element (data_meme_reg[244][4]) is unused and will be removed from module Data_mem.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10523 ; free virtual = 21687
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1466.344 ; gain = 294.766 ; free physical = 57287 ; free virtual = 69479
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -177,7 +487,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10523 ; free virtual = 21687
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1466.344 ; gain = 294.766 ; free physical = 57287 ; free virtual = 69479
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -188,40 +498,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[101][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Data_memory/data_meme_reg[71][7] )
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][7]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][6]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][5]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][4]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][3]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][2]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][1]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[101][0]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][7]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][6]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][5]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][4]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][3]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][2]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][1]) is unused and will be removed from module My_processor.
-WARNING: [Synth 8-3332] Sequential element (Data_memory/data_meme_reg[71][0]) is unused and will be removed from module My_processor.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21679
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57288 ; free virtual = 69479
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -245,7 +523,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21679
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -258,7 +536,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21679
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -270,25 +548,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21679
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21679
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21680
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21680
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -305,38 +583,40 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    10|
-|3     |LUT2   |   557|
-|4     |LUT3   |   188|
-|5     |LUT4   |    69|
-|6     |LUT5   |   140|
-|7     |LUT6   |  1005|
-|8     |MUXF7  |   238|
-|9     |MUXF8  |   119|
-|10    |FDRE   |  2182|
-|11    |LD     |     8|
-|12    |IBUF   |     9|
-|13    |OBUF   |     8|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     1|
+|4     |LUT2   |    20|
+|5     |LUT3   |    23|
+|6     |LUT4   |    16|
+|7     |LUT5   |    22|
+|8     |LUT6   |    43|
+|9     |FDRE   |   103|
+|10    |LD     |     8|
+|11    |IBUF   |     1|
+|12    |OBUF   |     8|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+----------------+-----------------+------+
 |      |Instance        |Module           |Cells |
 +------+----------------+-----------------+------+
-|1     |top             |                 |  4534|
-|2     |  Data_memory   |Data_mem         |  2958|
-|3     |  Inst_mem      |Instruction_mem  |  1361|
-|4     |  mon_ALU       |ALU              |    21|
-|5     |  register_bank |Banc_De_Registre |   176|
+|1     |top             |                 |   254|
+|2     |  DI_EX         |Pipline4op       |    79|
+|3     |  EX_MEM        |Pipeline3Op      |    21|
+|4     |  Inst_mem      |Instruction_mem  |    19|
+|5     |  LI_DI         |Pipline4op_0     |    15|
+|6     |  MEM_RE        |Pipeline3Op_1    |    25|
+|7     |  mon_ALU       |ALU              |    20|
+|8     |  register_bank |Banc_De_Registre |    48|
 +------+----------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10516 ; free virtual = 21680
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57287 ; free virtual = 69479
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.164 ; gain = 396.723 ; free physical = 10523 ; free virtual = 21687
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1568.172 ; gain = 396.723 ; free physical = 10537 ; free virtual = 21700
+Synthesis finished with 0 errors, 0 critical warnings and 2147 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1467.352 ; gain = 295.773 ; free physical = 57297 ; free virtual = 69489
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1467.359 ; gain = 295.773 ; free physical = 57300 ; free virtual = 69492
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 384 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -345,11 +625,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-61 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
+234 Infos, 118 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1624.191 ; gain = 464.375 ; free physical = 10515 ; free virtual = 21679
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1580.379 ; gain = 420.555 ; free physical = 57278 ; free virtual = 69470
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/kanane/Bureau/4A/ProjetSI/project_1/MicroProc/project_1.runs/synth_1/My_processor.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file My_processor_utilization_synth.rpt -pb My_processor_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1648.203 ; gain = 0.000 ; free physical = 10513 ; free virtual = 21677
-INFO: [Common 17-206] Exiting Vivado at Mon May 29 22:41:21 2023...
+report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1604.391 ; gain = 0.000 ; free physical = 57273 ; free virtual = 69465
+INFO: [Common 17-206] Exiting Vivado at Tue May 30 20:46:48 2023...

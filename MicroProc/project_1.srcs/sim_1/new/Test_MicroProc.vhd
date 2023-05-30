@@ -62,11 +62,11 @@ port map(clk=>clk,
 Clock_process : process
 begin 
     Clk <= not(clk);
-    wait for 5ns;
+    wait for 10ns;
 end process;
 
 
-ADDR <= "00000000",             --AFC 0 5, REG(0) WILL CONTAIN 5
+ADDR <= "00000000" after 50 ns ,             --AFC 0 5, REG(0) WILL CONTAIN 5
         "00000001" after 100ns, --AFC 1 6, REG(1) WILL CONTAIN 6
         "00000010" after 200ns, --ADD 2 0 1, REG(2) WILL CONTAIN 11
         "00000011" after 300ns, --COP 3 2, REG(3) WILL CONTAIN 11

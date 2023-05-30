@@ -44,7 +44,11 @@ end Pipeline3Op;
 architecture Behavioral of Pipeline3Op is
 
 begin
-    out_A <= in_A;
-    out_OP <= in_OP;
-    out_B <= in_B;
+process
+begin
+    wait until clk'event and clk ='1';
+        out_A <= in_A;
+        out_OP <= in_OP;
+        out_B <= in_B;
+end process;
 end Behavioral;

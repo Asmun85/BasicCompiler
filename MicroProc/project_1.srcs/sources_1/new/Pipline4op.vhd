@@ -32,11 +32,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Pipline4op is
-    Port ( Clk    : in std_logic;
-           in_A   : in STD_LOGIC_vector(7 downto 0);
-           In_OP  : in STD_LOGIC_vector(7 downto 0);
-           In_B   : in STD_LOGIC_vector(7 downto 0);
-           in_C   : in STD_LOGIC_vector(7 downto 0);
+    Port ( alea   :     std_logic;
+           Clk    : in  std_logic;
+           in_A   : in  STD_LOGIC_vector(7 downto 0);
+           In_OP  : in  STD_LOGIC_vector(7 downto 0);
+           In_B   : in  STD_LOGIC_vector(7 downto 0);
+           in_C   : in  STD_LOGIC_vector(7 downto 0);
            out_A  : out STD_LOGIC_vector(7 downto 0);
            out_OP : out STD_LOGIC_vector(7 downto 0);
            out_B  : out STD_LOGIC_vector(7 downto 0);
@@ -46,8 +47,19 @@ end Pipline4op;
 architecture Behavioral of Pipline4op is
 
 begin
-    out_A <= in_A;
-    out_OP <= in_OP;
-    out_B <= in_B;
-    out_C <= in_C;
+process 
+begin
+    wait until clk'event and clk='1';
+    if alea ='1' then
+        out_A  <= x"00";
+        out_OP <= x"00";
+        out_B  <= x"00";
+        out_C  <= x"00";        
+    else
+        out_A <= in_A;
+        out_OP <= in_OP;
+        out_B <= in_B;
+        out_C <= in_C;
+    end if;
+end process;       
 end Behavioral;
