@@ -50,11 +50,12 @@ begin
             if Ctrl_ALU    = "001" then Res <= (x"00"&A) + (x"00"&B);
             elsif Ctrl_ALU = "010" then Res <= (x"00"&A) - (x"00"&B);
             elsif Ctrl_ALU = "100" then Res <= A * B;
-            end if;             
+            end if;
+           
         end process;
         O <= '1' when (Res(15 downto 8) /= "00000000") else '0';
         Z <= '1' when (Res(7 downto 0) = x"00")  else '0';
-        N <= '0' when (Res(15 downto 8) = x"00") else '1';
+        N <= '0' when (Res(15 downto 8) = x"00") else '1';          
         C <= Res(8); -- Cary for add OP
         S <= Res (7 downto 0); --Selecting the first eight bits for the output result
         
