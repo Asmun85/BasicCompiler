@@ -84,7 +84,7 @@ int patching = -1;
 int nextCond = -1;
 int startloop = -1;
 
-#line 88 "y.tab.c"
+#line 88 "gram.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -117,8 +117,8 @@ int startloop = -1;
 
 /* Use api.header.include to #include this header
    instead of duplicating it here.  */
-#ifndef YY_YY_Y_TAB_H_INCLUDED
-# define YY_YY_Y_TAB_H_INCLUDED
+#ifndef YY_YY_GRAM_TAB_H_INCLUDED
+# define YY_YY_GRAM_TAB_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 1
@@ -167,40 +167,6 @@ extern int yydebug;
     tNOT = 290
   };
 #endif
-/* Tokens.  */
-#define tPRINT 258
-#define tRETURN 259
-#define tINT 260
-#define tVOID 261
-#define tMAIN 262
-#define tCONST 263
-#define tADD 264
-#define tSUB 265
-#define tDIV 266
-#define tMUL 267
-#define tLT 268
-#define tGT 269
-#define tNE 270
-#define tEQ 271
-#define tLE 272
-#define tGE 273
-#define tASSIGN 274
-#define tLBRACE 275
-#define tLPAR 276
-#define tRBRACE 277
-#define tRPAR 278
-#define tSEMI 279
-#define tCOMMA 280
-#define tTRUE 281
-#define tFALSE 282
-#define tID 283
-#define tNB 284
-#define tIF 285
-#define tELSE 286
-#define tWHILE 287
-#define tOR 288
-#define tAND 289
-#define tNOT 290
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -209,7 +175,7 @@ union YYSTYPE
 #line 27 "gram.y"
  int nb ; char * name; 
 
-#line 213 "y.tab.c"
+#line 179 "gram.tab.c"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -222,7 +188,7 @@ extern YYSTYPE yylval;
 
 int yyparse (void);
 
-#endif /* !YY_YY_Y_TAB_H_INCLUDED  */
+#endif /* !YY_YY_GRAM_TAB_H_INCLUDED  */
 
 
 
@@ -591,11 +557,11 @@ static const yytype_int16 yyrline[] =
        0,    54,    54,    57,    58,    62,    62,    69,    73,    74,
       78,    83,    84,    85,    88,    91,    92,    95,    96,    99,
      100,   101,   141,   143,   144,   143,   156,   160,   156,   168,
-     174,   175,   180,   183,   180,   187,   191,   195,   197,   197,
-     203,   206,   209,   211,   211,   217,   220,   225,   229,   235,
-     241,   247,   253,   254,   255,   260,   265,   265,   274,   275,
-     279,   281,   283,   285,   287,   289,   294,   296,   301,   302,
-     306,   308
+     174,   175,   179,   182,   179,   186,   190,   194,   196,   196,
+     202,   205,   208,   210,   210,   216,   219,   224,   228,   234,
+     240,   246,   252,   253,   254,   259,   264,   264,   273,   274,
+     278,   280,   282,   284,   286,   288,   293,   295,   300,   301,
+     305,   307
 };
 #endif
 
@@ -1488,7 +1454,7 @@ yyreduce:
                     {patching = get_nb_lignes_asm();	
 							       table_fun new_fun = add_fun(function_table, (yyvsp[-1].name), -1, patching,0);
                      }
-#line 1492 "y.tab.c"
+#line 1458 "gram.tab.c"
     break;
 
   case 6:
@@ -1497,7 +1463,7 @@ yyreduce:
                                                deleteSymbols(symbole_table);
                                                decrementDepth();
                                                add_inst(instruction_table,"NOP",-1,-1,-1);}
-#line 1501 "y.tab.c"
+#line 1467 "gram.tab.c"
     break;
 
   case 7:
@@ -1506,19 +1472,19 @@ yyreduce:
                                                                                 deleteSymbols(symbole_table);
                                                                                 decrementDepth();
                                                                                 add_inst(instruction_table,"NOP",-1,-1,-1);}
-#line 1510 "y.tab.c"
+#line 1476 "gram.tab.c"
     break;
 
   case 14:
 #line 88 "gram.y"
                                           {printf("Fuction Call\n");}
-#line 1516 "y.tab.c"
+#line 1482 "gram.tab.c"
     break;
 
   case 15:
 #line 91 "gram.y"
                    {printf("Argument declared");}
-#line 1522 "y.tab.c"
+#line 1488 "gram.tab.c"
     break;
 
   case 21:
@@ -1557,19 +1523,19 @@ yyreduce:
    }
 
   }
-#line 1561 "y.tab.c"
+#line 1527 "gram.tab.c"
     break;
 
   case 22:
 #line 142 "gram.y"
             { printf("Print statement found\n");}
-#line 1567 "y.tab.c"
+#line 1533 "gram.tab.c"
     break;
 
   case 23:
 #line 143 "gram.y"
                  {startloop = get_nb_lignes_asm();}
-#line 1573 "y.tab.c"
+#line 1539 "gram.tab.c"
     break;
 
   case 24:
@@ -1577,7 +1543,7 @@ yyreduce:
                     {asm_inst inst = add_inst(instruction_table,"JMPF",-1,-1,-1);
                      (yyvsp[-4].nb) = inst.m_num;
                      int valCond = unstack(symbole_table);}
-#line 1581 "y.tab.c"
+#line 1547 "gram.tab.c"
     break;
 
   case 25:
@@ -1589,7 +1555,7 @@ yyreduce:
                                    asm_inst inst = add_inst(instruction_table,"JMP",-1,startloop,-1);
                                    // The minus one is due to the JMPF instruction we have to go to the comparison instruction
                                    }
-#line 1593 "y.tab.c"
+#line 1559 "gram.tab.c"
     break;
 
   case 26:
@@ -1598,7 +1564,7 @@ yyreduce:
                                    (yyvsp[-3].nb) = inst.m_num;
                                    int valCond = unstack(symbole_table);
                                    printf("---------- %d ----------\n",valCond);}
-#line 1602 "y.tab.c"
+#line 1568 "gram.tab.c"
     break;
 
   case 27:
@@ -1610,264 +1576,257 @@ yyreduce:
                                    nextCond = current;
                                    deleteSymbols(symbole_table);
                                    decrementDepth();}
-#line 1614 "y.tab.c"
+#line 1580 "gram.tab.c"
     break;
 
   case 29:
 #line 168 "gram.y"
                        {printf("function called as an instruction\n");}
-#line 1620 "y.tab.c"
+#line 1586 "gram.tab.c"
     break;
 
   case 30:
 #line 174 "gram.y"
        {add_inst(instruction_table,"PRI",getAddrName(symbole_table,(yyvsp[0].name)),-1,-1);}
-#line 1626 "y.tab.c"
-    break;
-
-  case 31:
-#line 175 "gram.y"
-           {int addr = unstack(symbole_table);
-            asm_inst inst = add_inst(instruction_table,"PRI",addr,0,0);}
-#line 1633 "y.tab.c"
+#line 1592 "gram.tab.c"
     break;
 
   case 32:
-#line 180 "gram.y"
+#line 179 "gram.y"
           {patch(instruction_table,patching,nextCond + 1);
            asm_inst inst_else = add_inst(instruction_table,"JMP",1,-1,0);
            (yyvsp[0].nb) = inst_else.m_num;}
-#line 1641 "y.tab.c"
+#line 1600 "gram.tab.c"
     break;
 
   case 33:
-#line 183 "gram.y"
+#line 182 "gram.y"
                                 {int current = get_nb_lignes_asm();
                                  patch(instruction_table,(yyvsp[-3].nb),current);}
-#line 1648 "y.tab.c"
+#line 1607 "gram.tab.c"
     break;
 
   case 34:
-#line 185 "gram.y"
+#line 184 "gram.y"
                    {deleteSymbols(symbole_table);
                     decrementDepth();}
-#line 1655 "y.tab.c"
+#line 1614 "gram.tab.c"
     break;
 
   case 37:
-#line 195 "gram.y"
+#line 194 "gram.y"
               {printf("int declaration found\n");
 				addSymbol(symbole_table,(yyvsp[0].name),1);}
-#line 1662 "y.tab.c"
+#line 1621 "gram.tab.c"
     break;
 
   case 38:
-#line 197 "gram.y"
+#line 196 "gram.y"
                       {printf("int Declaration & Assignement found\n");
                 symbol s = addSymbol(symbole_table,(yyvsp[-1].name),1);}
-#line 1669 "y.tab.c"
+#line 1628 "gram.tab.c"
     break;
 
   case 39:
-#line 200 "gram.y"
+#line 199 "gram.y"
                 {int addr1 = unstack(symbole_table);
                 asm_inst inst = add_inst(instruction_table,
                 "COP",getAddrName(symbole_table,(yyvsp[-3].name)),addr1,0);}
-#line 1677 "y.tab.c"
+#line 1636 "gram.tab.c"
     break;
 
   case 42:
-#line 209 "gram.y"
+#line 208 "gram.y"
        {printf("Const Declaration found\n");
         symbol s = addSymbol(symbole_table,(yyvsp[0].name),2);}
-#line 1684 "y.tab.c"
+#line 1643 "gram.tab.c"
     break;
 
   case 43:
-#line 211 "gram.y"
+#line 210 "gram.y"
                 {printf("Const declaration & assignement found\n");
                  symbol s = addSymbolAssigned(symbole_table,(yyvsp[-1].name),2);}
-#line 1691 "y.tab.c"
+#line 1650 "gram.tab.c"
     break;
 
   case 44:
-#line 214 "gram.y"
+#line 213 "gram.y"
                 {int addr1 = unstack(symbole_table);
                  asm_inst inst = add_inst(instruction_table,
                  "COP",getAddrName(symbole_table,(yyvsp[-3].name)),addr1,-1);}
-#line 1699 "y.tab.c"
+#line 1658 "gram.tab.c"
     break;
 
   case 46:
-#line 220 "gram.y"
+#line 219 "gram.y"
             { printf("Operand ID found\n");
           printf("Operand ID pushed as a tmpvar\n");
           symbol tmp = addSymbol(symbole_table,"tmpvar_id",1);
           asm_inst inst = add_inst(instruction_table,
                           "COP",tmp.addr,getAddrName(symbole_table,(yyvsp[0].name)),0);}
-#line 1709 "y.tab.c"
+#line 1668 "gram.tab.c"
     break;
 
   case 47:
-#line 225 "gram.y"
+#line 224 "gram.y"
         {printf("Operand NB found\n");
           printf("Operand NB pushed as a tmpvar\n");
           symbol tmp = addSymbol(symbole_table,"tmpvar_nb",1);
           asm_inst inst = add_inst(instruction_table,"AFC",tmp.addr,(yyvsp[0].nb),0);}
-#line 1718 "y.tab.c"
+#line 1677 "gram.tab.c"
     break;
 
   case 48:
-#line 229 "gram.y"
+#line 228 "gram.y"
                          {printf("ADD operation found\n");
                           int arg2 = unstack(symbole_table);
                           int arg1 = unstack(symbole_table);
                           symbol result = addSymbol(symbole_table,"tmpvar_ADD",1);
                           asm_inst inst = add_inst(instruction_table,
                           "ADD",getAddr(symbole_table,result),arg1,arg2);}
-#line 1729 "y.tab.c"
+#line 1688 "gram.tab.c"
     break;
 
   case 49:
-#line 235 "gram.y"
+#line 234 "gram.y"
                          {printf("SUB operation found\n");
                           int arg2 = unstack(symbole_table);
                           int arg1 = unstack(symbole_table);
                           symbol result = addSymbol(symbole_table,"tmpvar_SUB",1);
                           asm_inst inst = add_inst(instruction_table,
                           "SUB",getAddr(symbole_table,result),arg1,arg2);}
-#line 1740 "y.tab.c"
+#line 1699 "gram.tab.c"
     break;
 
   case 50:
-#line 241 "gram.y"
+#line 240 "gram.y"
                          {printf("MUL operation found\n");
                           int arg2 = unstack(symbole_table);
                           int arg1 = unstack(symbole_table);
                           symbol result = addSymbol(symbole_table,"tmpvar_MUL",1);
                           asm_inst inst = add_inst(instruction_table,
                           "MUL",getAddr(symbole_table,result),arg1,arg2);}
-#line 1751 "y.tab.c"
+#line 1710 "gram.tab.c"
     break;
 
   case 51:
-#line 247 "gram.y"
+#line 246 "gram.y"
                          {printf("DIV operation found\n");
                           int arg2 = unstack(symbole_table);
                           int arg1 = unstack(symbole_table);
                           symbol result = addSymbol(symbole_table,"tmpvar_DIV",1);
                           asm_inst inst = add_inst(instruction_table,
                           "DIV",getAddr(symbole_table,result),arg1,arg2);}
-#line 1762 "y.tab.c"
+#line 1721 "gram.tab.c"
     break;
 
   case 54:
-#line 255 "gram.y"
+#line 254 "gram.y"
                  {(yyval.nb) = 1;
                   printf("Function call as an oprand \n");}
-#line 1769 "y.tab.c"
+#line 1728 "gram.tab.c"
     break;
 
   case 55:
-#line 260 "gram.y"
+#line 259 "gram.y"
                            {printf("%s Comparison found\n",(yyvsp[-1].name));
                             int arg1 = unstack(symbole_table);
                             int arg2 = unstack(symbole_table);
                             symbol result = addSymbol(symbole_table,"tmpvar_ResComp",1);
                             asm_inst inst = add_inst(instruction_table,(yyvsp[-1].name),getAddr(symbole_table,result),arg1,arg2);}
-#line 1779 "y.tab.c"
+#line 1738 "gram.tab.c"
     break;
 
   case 56:
-#line 265 "gram.y"
+#line 264 "gram.y"
                            {printf("%s Comparison found\n",(yyvsp[-1].name));
                             int arg1 = unstack(symbole_table);
                             int arg2 = unstack(symbole_table);
                             symbol result = addSymbol(symbole_table,"tmpvar_ResComp",1);
                             asm_inst inst = add_inst(instruction_table,(yyvsp[-1].name),getAddr(symbole_table,result),arg1,arg2);}
-#line 1789 "y.tab.c"
+#line 1748 "gram.tab.c"
     break;
 
   case 57:
-#line 270 "gram.y"
+#line 269 "gram.y"
                                               {printf("Logical %s Statement found!\n",(yyvsp[-4].name));
                                                unstack(symbole_table);
                                                unstack(symbole_table);
                                                symbol result = addSymbol(symbole_table,"tmpvar_ResLogic",1);}
-#line 1798 "y.tab.c"
+#line 1757 "gram.tab.c"
     break;
 
   case 60:
-#line 279 "gram.y"
+#line 278 "gram.y"
         {(yyval.name) = " LE";
         printf("Operator <= found\n");}
-#line 1805 "y.tab.c"
+#line 1764 "gram.tab.c"
     break;
 
   case 61:
-#line 281 "gram.y"
+#line 280 "gram.y"
         {(yyval.name) = " GE";
         printf("Operator >= found\n");}
-#line 1812 "y.tab.c"
+#line 1771 "gram.tab.c"
     break;
 
   case 62:
-#line 283 "gram.y"
+#line 282 "gram.y"
         {(yyval.name) = " LT";
         printf("Operator < found\n");}
-#line 1819 "y.tab.c"
+#line 1778 "gram.tab.c"
     break;
 
   case 63:
-#line 285 "gram.y"
+#line 284 "gram.y"
         {(yyval.name) = " GT";
         printf("Operator > found\n");}
-#line 1826 "y.tab.c"
+#line 1785 "gram.tab.c"
     break;
 
   case 64:
-#line 287 "gram.y"
+#line 286 "gram.y"
         {(yyval.name) = " EQ";
         printf("Operator == found\n");}
-#line 1833 "y.tab.c"
+#line 1792 "gram.tab.c"
     break;
 
   case 65:
-#line 289 "gram.y"
+#line 288 "gram.y"
         {(yyval.name) = " NE";
         printf("Operator != found\n");}
-#line 1840 "y.tab.c"
+#line 1799 "gram.tab.c"
     break;
 
   case 66:
-#line 294 "gram.y"
+#line 293 "gram.y"
          {(yyval.name) = "AND";
          printf("Logical operator AND found\n");}
-#line 1847 "y.tab.c"
+#line 1806 "gram.tab.c"
     break;
 
   case 67:
-#line 296 "gram.y"
+#line 295 "gram.y"
          {(yyval.name) = "OR";
          printf("Logival operator OR found\n");}
-#line 1854 "y.tab.c"
+#line 1813 "gram.tab.c"
     break;
 
   case 70:
-#line 306 "gram.y"
+#line 305 "gram.y"
                         {printf("return Operand statement!\n");
                                     unstack(symbole_table);}
-#line 1861 "y.tab.c"
+#line 1820 "gram.tab.c"
     break;
 
   case 71:
-#line 308 "gram.y"
+#line 307 "gram.y"
                {printf("return Void Statement\n");}
-#line 1867 "y.tab.c"
+#line 1826 "gram.tab.c"
     break;
 
 
-#line 1871 "y.tab.c"
+#line 1830 "gram.tab.c"
 
       default: break;
     }
@@ -2099,7 +2058,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 310 "gram.y"
+#line 309 "gram.y"
 
 
 void yyerror(const char *msg) {
@@ -2108,7 +2067,6 @@ void yyerror(const char *msg) {
 
 extern FILE *ASM;
 extern FILE * ASM_final;
-extern AsmTableSize;
 int main(void) {
   ASM = fopen("ASM","w");
   ASM_final = fopen("ASM_final","w");
@@ -2122,13 +2080,6 @@ int main(void) {
 	print_sTable(symbole_table); // Should be empty at the end of the parsing except for global variables
   print_instable(instruction_table);
   print_funtable(function_table);
-  printf("----------------Interpreting code----------------- \n");
-
-  interpretCode(instruction_table,AsmTableSize);
-
-  printf("---------------Printing register table:----------------\n");
-  
-  printInterpreter();
   printf("-----------------END OF PARSING-----------------\n");
   return 0;
 }

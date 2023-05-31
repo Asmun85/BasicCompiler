@@ -5,7 +5,7 @@ BIN=compiler
 CC=gcc
 GCCFLAGS=-Wall -g -Wno-unused-variable
 
-OBJ=y.tab.o lex.yy.o symbol_table_TAB.o instruction_table.o
+OBJ=y.tab.o lex.yy.o symbol_table_TAB.o instruction_table.o FunctionTable.o
 
 all: $(BIN)
 
@@ -22,7 +22,7 @@ $(BIN): $(OBJ)
 	$(CC) $(GCCFLAGS) $^ -o $@
 
 clean:
-	rm $(OBJ) y.tab.c y.tab.h lex.yy.c y.output compiler
+	rm $(OBJ) y.tab.c y.tab.h lex.yy.c gram.output compiler
 
 everything: all
 	./$(BIN) < test_all.c

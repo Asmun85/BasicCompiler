@@ -47,22 +47,18 @@ int startloop = -1;
 %type <name> CompOp
 %type <name> LogicOp
 %type <nb>   NextStatement Operand
-// %start program
+%start program
 %%
 
 program 
-  :Functions Main;
-
-Functions
-  : Function Functions
-  |
-  ;
+  :
+  | program Function;
 
 Function 
   : tVOID tID tLPAR {patching = get_nb_lignes_asm();	
-							       table_fun new_fun = add_fun(function_table, $2, -1, patching,0);
+							      //  table_fun new_fun = add_fun(function_table, $2, -1, patching,0);
                      }
-    tRPAR tLBRACE Instructions tRBRACE {printf("Void Function declared\n");
+    DecArg tRPAR tLBRACE Instructions tRBRACE {printf("Void Function declared\n");
                                                deleteSymbols(symbole_table);
                                                decrementDepth();
                                                add_inst(instruction_table,"NOP",-1,-1,-1);}  
@@ -74,18 +70,19 @@ Function
   | ConstDeclaration tSEMI
   ;
 
-Main 
-  : tVOID tMAIN tLPAR tRPAR tLBRACE Instructions tRBRACE;
-
-
-
 DecArg
-	: /*eps*/
+	: 
   | tVOID 
   | intArg ;
 
 FunctionCall
-	: tID tLPAR Parametre tRPAR tSEMI {printf("Fuction Call\n");}; 
+	: tID tLPAR funArg tRPAR tSEMI {printf("Fuction Call\n");}; 
+
+funArg
+  : /*eps*/
+  | Operand
+  | Operand tCOMMA funArg;
+
 
 intArg
 	: tINT tID {printf("Argument declared");}
@@ -172,8 +169,7 @@ Instruction
 
 PrintOperand
   :tID {add_inst(instruction_table,"PRI",getAddrName(symbole_table,$1),-1,-1);}
-  |Operand {int addr = unstack(symbole_table);
-            asm_inst inst = add_inst(instruction_table,"PRI",addr,0,0);}//@TODO: Ask how to print operand
+  |Operand //@TODO: Ask how to print operand
 
 
 NextStatement
@@ -198,8 +194,10 @@ intDeclarationList
                 symbol s = addSymbol(symbole_table,$1,1);} 
                 Operand
                 {int addr1 = unstack(symbole_table);
+                 asm_inst LOAD = add_inst(instruction_table,
+                "LOAD",0,addr1,0); //we load in the r(0) the value contained in addr1 (the value of the temporary variable)
                 asm_inst inst = add_inst(instruction_table,
-                "COP",getAddrName(symbole_table,$1),addr1,0);}
+                "STR",addr1,0,0);}
   | intDeclarationList tCOMMA intDeclarationList;
 
 ConstDeclaration
@@ -212,44 +210,58 @@ constDeclarationList
                  symbol s = addSymbolAssigned(symbole_table,$1,2);}
                 Operand     
                 {int addr1 = unstack(symbole_table);
-                 asm_inst inst = add_inst(instruction_table,
-                 "COP",getAddrName(symbole_table,$1),addr1,-1);}
+                 asm_inst LOAD = add_inst(instruction_table,
+                "LOAD",0,addr1,0); //we load in the r(0) the value contained in addr1 (the value of the temporary variable)
+                asm_inst inst = add_inst(instruction_table,
+                "STR",addr1,0,0);}
   |constDeclarationList tCOMMA intDeclarationList;
 
 Operand 
   :	tID { printf("Operand ID found\n");
           printf("Operand ID pushed as a tmpvar\n");
           symbol tmp = addSymbol(symbole_table,"tmpvar_id",1);
+          // asm_inst inst1 = add_inst(instruction_table,"LOAD",tmp.addr,getAddrName(symbole_table,$1),0);
+          asm_inst LOAD = add_inst(instruction_table,
+                          "LOAD",0,tmp.addr,0); //we load in the r(0) the value contained in addr1 (the value of the temporary variable)
           asm_inst inst = add_inst(instruction_table,
-                          "COP",tmp.addr,getAddrName(symbole_table,$1),0);}
-  | tNB {printf("Operand NB found\n");
-          printf("Operand NB pushed as a tmpvar\n");
-          symbol tmp = addSymbol(symbole_table,"tmpvar_nb",1);
-          asm_inst inst = add_inst(instruction_table,"AFC",tmp.addr,$1,0);}
+                          "STR",tmp.addr,0,0);}
+  | tNB   {printf("Operand NB found\n");
+           printf("Operand NB pushed as a tmpvar\n");
+           symbol tmp = addSymbol(symbole_table,"tmpvar_nb",1);
+           asm_inst inst = add_inst(instruction_table,"AFC",tmp.addr,$1,0);
+           asm_inst str  = add_inst(instruction_table,"STR",0,tmp.addr,0);}
   | Operand tADD Operand {printf("ADD operation found\n");
                           int arg2 = unstack(symbole_table);
                           int arg1 = unstack(symbole_table);
                           symbol result = addSymbol(symbole_table,"tmpvar_ADD",1);
-                          asm_inst inst = add_inst(instruction_table,
-                          "ADD",getAddr(symbole_table,result),arg1,arg2);} 
+                          asm_inst ld1  = add_inst(instruction_table,"LOAD",0,arg1,-1);
+                          asm_inst ld2  = add_inst(instruction_table,"LOAD",1,arg2,-1);
+                          asm_inst inst = add_inst(instruction_table,"ADD",0,0,1);
+                          asm_inst str  = add_inst(instruction_table,"STR",getAddr(symbole_table,result),0,-1);} 
   | Operand tSUB Operand {printf("SUB operation found\n");
                           int arg2 = unstack(symbole_table);
                           int arg1 = unstack(symbole_table);
                           symbol result = addSymbol(symbole_table,"tmpvar_SUB",1);
-                          asm_inst inst = add_inst(instruction_table,
-                          "SUB",getAddr(symbole_table,result),arg1,arg2);}
+                          asm_inst ld1  = add_inst(instruction_table,"LOAD",0,arg1,-1);
+                          asm_inst ld2  = add_inst(instruction_table,"LOAD",1,arg2,-1);
+                          asm_inst inst = add_inst(instruction_table,"SUB",0,0,1);
+                          asm_inst str  = add_inst(instruction_table,"STR",getAddr(symbole_table,result),0,-1);}
   | Operand tMUL Operand {printf("MUL operation found\n");
                           int arg2 = unstack(symbole_table);
                           int arg1 = unstack(symbole_table);
                           symbol result = addSymbol(symbole_table,"tmpvar_MUL",1);
-                          asm_inst inst = add_inst(instruction_table,
-                          "MUL",getAddr(symbole_table,result),arg1,arg2);}
+                          asm_inst ld1  = add_inst(instruction_table,"LOAD",0,arg1,-1);
+                          asm_inst ld2  = add_inst(instruction_table,"LOAD",1,arg2,-1);
+                          asm_inst inst = add_inst(instruction_table,"MUL",0,0,1);
+                          asm_inst str  = add_inst(instruction_table,"STR",getAddr(symbole_table,result),0,-1);}
   | Operand tDIV Operand {printf("DIV operation found\n");
                           int arg2 = unstack(symbole_table);
                           int arg1 = unstack(symbole_table);
                           symbol result = addSymbol(symbole_table,"tmpvar_DIV",1);
-                          asm_inst inst = add_inst(instruction_table,
-                          "DIV",getAddr(symbole_table,result),arg1,arg2);}
+                          asm_inst ld1  = add_inst(instruction_table,"LOAD",0,arg1,-1);
+                          asm_inst ld2  = add_inst(instruction_table,"LOAD",1,arg2,-1);
+                          asm_inst inst = add_inst(instruction_table,"DIV",0,0,1);
+                          asm_inst str  = add_inst(instruction_table,"STR",getAddr(symbole_table,result),0,-1);}
   | tID tLPAR Parametre tRPAR 
   | tID tLPAR tRPAR 
   | FunctionCall {$$ = 1;
@@ -261,12 +273,18 @@ Condition
                             int arg1 = unstack(symbole_table);
                             int arg2 = unstack(symbole_table);
                             symbol result = addSymbol(symbole_table,"tmpvar_ResComp",1);
-                            asm_inst inst = add_inst(instruction_table,$2,getAddr(symbole_table,result),arg1,arg2);}
+                            asm_inst ld1  = add_inst(instruction_table,"LOAD",0,arg1,-1);
+                            asm_inst ld2  = add_inst(instruction_table,"LOAD",1,arg2,-1);
+                            asm_inst inst = add_inst(instruction_table,$2,0,0,1);
+                            asm_inst str  = add_inst(instruction_table,"STR",getAddr(symbole_table,result),0,-1);}
   | Operand CompOp Operand {printf("%s Comparison found\n",$2);
                             int arg1 = unstack(symbole_table);
                             int arg2 = unstack(symbole_table);
                             symbol result = addSymbol(symbole_table,"tmpvar_ResComp",1);
-                            asm_inst inst = add_inst(instruction_table,$2,getAddr(symbole_table,result),arg1,arg2);} 
+                            asm_inst ld1  = add_inst(instruction_table,"LOAD",0,arg1,-1);
+                            asm_inst ld2  = add_inst(instruction_table,"LOAD",1,arg2,-1);
+                            asm_inst inst = add_inst(instruction_table,$2,0,0,1);
+                            asm_inst str  = add_inst(instruction_table,"STR",getAddr(symbole_table,result),0,-1);} 
                             LogicOp Condition {printf("Logical %s Statement found!\n",$2);
                                                unstack(symbole_table);
                                                unstack(symbole_table);
@@ -311,31 +329,25 @@ ReturnFinal
 
 void yyerror(const char *msg) {
   fprintf(stderr, "error: %s\n", msg);
+  exit(1);
 }
 
 extern FILE *ASM;
 extern FILE * ASM_final;
-extern AsmTableSize;
 int main(void) {
   ASM = fopen("ASM","w");
   ASM_final = fopen("ASM_final","w");
+
   printf("file opened correctly\n");
 	symbole_table = init_sTable();
   instruction_table = init_instable();
   function_table = init_funtable();
-  yydebug=1;
+  // yydebug=1;
   yyparse();
   printf("-----------------START OF PARSING-----------------\n");
 	print_sTable(symbole_table); // Should be empty at the end of the parsing except for global variables
   print_instable(instruction_table);
   print_funtable(function_table);
-  printf("----------------Interpreting code----------------- \n");
-
-  interpretCode(instruction_table,AsmTableSize);
-
-  printf("---------------Printing register table:----------------\n");
-  
-  printInterpreter();
   printf("-----------------END OF PARSING-----------------\n");
   return 0;
 }

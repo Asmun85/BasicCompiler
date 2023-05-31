@@ -8,12 +8,11 @@
 -Logical operations
 -While statement 
 -Constant declaration (once we've init can't change it anymore)
+-Convert the ASM file with a register approach (including load and store)
 
-### @TODO 
--modify the process of the tmp_var (getaddr then unstack instead of returning an address we can return the whol symbol)
--Convert the ASM file with a register approach
+### List of what I didn't manage to do
 -Code an interpreter for the ASM register oriented 
--Function call 
+-Function call (Set les bonnes addresse de retour et les bons appelle)
 
 #### To test the compiler, just execute the bash script associated with the functionnality that you want to test 
 (example : want to check if integer declaration and assignement if functionnal : ./intDecAndAssign)

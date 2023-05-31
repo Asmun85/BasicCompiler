@@ -1,8 +1,5 @@
-int fun(int x) {
-  int a;
-  int b,c;
-  b=6;
-  c=8;
-  a = b + c * 2; 
-  return 0;
+void fun() {
+  const int a = 5;
+  int b,c = 2;
+  b = a + c;
 }

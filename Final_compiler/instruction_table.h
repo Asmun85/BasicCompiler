@@ -23,5 +23,7 @@ void print_instable(asm_inst * inst_table);
 void patch(asm_inst * inst_table,int from, int to);
 
 asm_inst add_inst(asm_inst*,char * name,int res, int op1 , int op2);
+void interpreteur(asm_inst *t, int nb_instr);
+void printInterpreter();
 
 #endif

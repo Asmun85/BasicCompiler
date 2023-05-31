@@ -34,8 +34,8 @@
 /* Undocumented macros, especially those whose name start with YY_,
    are private implementation details.  Do not rely on them.  */
 
-#ifndef YY_YY_Y_TAB_H_INCLUDED
-# define YY_YY_Y_TAB_H_INCLUDED
+#ifndef YY_YY_GRAM_TAB_H_INCLUDED
+# define YY_YY_GRAM_TAB_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 1
@@ -84,40 +84,6 @@ extern int yydebug;
     tNOT = 290
   };
 #endif
-/* Tokens.  */
-#define tPRINT 258
-#define tRETURN 259
-#define tINT 260
-#define tVOID 261
-#define tMAIN 262
-#define tCONST 263
-#define tADD 264
-#define tSUB 265
-#define tDIV 266
-#define tMUL 267
-#define tLT 268
-#define tGT 269
-#define tNE 270
-#define tEQ 271
-#define tLE 272
-#define tGE 273
-#define tASSIGN 274
-#define tLBRACE 275
-#define tLPAR 276
-#define tRBRACE 277
-#define tRPAR 278
-#define tSEMI 279
-#define tCOMMA 280
-#define tTRUE 281
-#define tFALSE 282
-#define tID 283
-#define tNB 284
-#define tIF 285
-#define tELSE 286
-#define tWHILE 287
-#define tOR 288
-#define tAND 289
-#define tNOT 290
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -126,7 +92,7 @@ union YYSTYPE
 #line 27 "gram.y"
  int nb ; char * name; 
 
-#line 130 "y.tab.h"
+#line 96 "gram.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -139,4 +105,4 @@ extern YYSTYPE yylval;
 
 int yyparse (void);
 
-#endif /* !YY_YY_Y_TAB_H_INCLUDED  */
+#endif /* !YY_YY_GRAM_TAB_H_INCLUDED  */

@@ -1,17 +1,10 @@
-void fun(){
-  int a =0;
-  int c=1;
-  if (a==2 && c<= 5 ){
-    a=6;
-    if (a > 6){
-      print(a);
+void main(){
+  int a = 8;
+  if (a){
+    a = 0;
+    if (a){
+      a=9;
     }
+    a = 7;
   }
-  else{
-    int b;
-    a=8;
-    b=10;
-    print(c);
-  }
-  int z =69;
 }
